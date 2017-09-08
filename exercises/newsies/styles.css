@@ -1,0 +1,89 @@
+body {
+    background-color: #FCFBF5;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #2B2945;
+}
+
+p {
+    font-size: 0.85em;
+    line-height: 2;
+}
+
+header {
+    background-color: #FFFFFF;
+    height: 5%;
+    padding: 1%;
+}
+
+.logo {
+    font-family: 'Alfa Slab One', cursive;
+    color: #232BA6;
+}
+
+nav {
+    border-top: 1px solid #BAB9BE;
+    padding-top: 1%;
+}
+
+nav a {
+    margin-left: 2%;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.article-title {
+    text-align: center;
+}
+
+h5 {
+    color: #A19DA0;
+}
+
+.main-image {
+    width: 100%;
+    height: 350px;
+    margin: auto;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.first-letter {
+    font-size: 3em;
+}
+
+
+.article-content {
+    width: 75%;
+    margin: auto;
+    padding: 2%;
+}
+
+.article-content p {
+    display: inline;
+}
+
+.article-content div {
+    column-count: 3;
+}
+
+.article-content p.highlight-text {
+    color: #232BA6;
+    display: inline-block;
+}
+
+
+footer {
+    background-color: #FFFFFF;
+    padding: 2% 0 2% 3%;
+}
+
+footer a {
+    display: block;
+    margin: 1%;
+}
