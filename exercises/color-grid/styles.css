@@ -6,6 +6,7 @@
 section {
     width: 65%;
     margin: auto;
+    margin-top: 10%;
 }
 
 
@@ -33,10 +34,6 @@ section {
     height: 125px;
 }
 
-#blue-last {
-    border-right: 10px solid white;
-}
-
 .green {
     display: inline-block;
     background-color: #8DC63F;
@@ -52,10 +49,5 @@ section {
 }
 
 .border-styles {
-    border-top: 10px solid white;
-    border-right: 10px solid white;
-}
-
-div div:last-child {
-    border-right: 0px;
+    border: 5px solid white;
 }

@@ -1,0 +1,246 @@
+body {
+   font-family: 'Comfortaa', cursive; 
+}
+
+.whole-container {
+    margin: auto;
+    width: 75%;
+    height: auto;
+    background-color: aliceblue;
+    padding: 5%;
+}
+
+.all-flags {
+    width: 500px;
+    height: 300px;
+    padding-bottom: 10%;
+    padding-top: 2%;
+    border-bottom: 1px solid #d3d3d3;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+.france-divs {
+    display: inline-block;
+    width: 32.5%;
+    height: 100%;
+}
+
+.france-divs:nth-child(1) {
+    background-color: blue;
+}
+
+.france-divs:nth-child(2) {
+    background-color: white;
+    
+}
+
+.france-divs:nth-child(3) {
+    background-color: red;
+}
+
+.germany-divs {
+    width: 100%;
+    height: 100px;
+}
+
+.germany-divs:nth-child(1) {
+    background-color: black;
+}
+
+.germany-divs:nth-child(2) {
+    background-color: red;
+    
+}
+
+.germany-divs:nth-child(3) {
+    background-color: yellow;
+}
+
+.mad-white {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.mad-red {
+    width: 65%;
+    height: 50%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mad-green {
+    width: 65%;
+    height: 50%;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.switz-back {
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.switz-middle {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.switz {
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    position: absolute;
+}
+
+.topr {
+    top: 0;
+    right: 0;
+}
+
+.bottoml {
+    left: 0;
+    bottom: 0;
+}
+
+.bottomr {
+    bottom: 0;
+    right: 0;
+}
+
+.sweden-back {
+    width: 100%;
+    height: 100%;
+    background-color: #FECC00;
+    position: relative;
+}
+
+.swed-blue {
+    height: 40%;
+    background-color: #006AA7;
+    position: absolute;
+}
+
+.swed-topr {
+    width: 58%;
+    position: absolute;
+    right: 0;
+}
+
+.swed-bottoml {
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+}
+
+.swed-topl {
+    width: 30%;
+    position: absolute;
+}
+
+.swed-bottomr {
+    width: 58%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.gambia-divs {
+    width: 100%;
+    height: 100px;
+}
+
+.gambia-divs:first-child {
+    background-color: #CE1126;
+}
+
+.gambia-divs:nth-child(2) {
+    background-color: #0C1C8C;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    height: 70px;
+}
+
+.gambia-divs:nth-child(3) {
+    background-color: #3A7728;
+}
+.tonga-back {
+    width: 100%;
+    height: 100%;
+    background-color: #C10000;
+    position: relative;
+}
+
+.tonga-corner {
+    width: 40%;
+    height: 50%;
+    background-color: white;
+    position: relative;
+}
+
+.tonga1 {
+    width: 30px;
+    height: 100px;
+}
+
+.tonga2 {
+    width: 100px;
+    height: 30px;
+}
+
+.bars {
+    background-color: #C10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.japan-back {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.japan-circle {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color: #BC002D;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.greece-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.greece-back {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.greece-back:nth-child(odd) {
+    height: 27.77px;
+    background-color: #0D5EAF;
+}
+
