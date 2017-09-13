@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Calculator</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple HTML Caculator</h1>
+        <div class="section-styling">
+            <h4>a calculator for adding</h4>
+           <form>
+               <input id="first-number-add" class="input-styling left-nudge" type="number" placeholder="#">
+               <input id="second-number-add" class="input-styling left-nudge" type="number" placeholder="#">
+               <button id="add-button" class="button-styling left-nudge" type="submit">ADD</button>
+               <button id="reset-button-add" class="button-styling left-nudge" type="reset">RESET</button>
+                <div class="answer-box">
+                   <div id="answer-number-add" class="input-styling answer-styling left-nudge"></div>
+                   <p class="answer-text left-nudge">Answer</p>
+               </div>
+
+            </form>
+        </div>
+        <div class="section-styling">
+            <h4>a calculator for subtracting</h4>
+           <form>
+               <input id="first-number-sub" class="input-styling left-nudge" type="number" placeholder="#">
+               <input id="second-number-sub" class="input-styling left-nudge" type="number" placeholder="#">
+               <button id="sub-button" class="button-styling left-nudge" type="submit">SUB</button>
+               <button id="reset-button-sub" class="button-styling left-nudge" type="reset">RESET</button>
+                <div class="answer-box">
+                   <div id="answer-number-sub" class="input-styling answer-styling left-nudge"></div>
+                   <p class="answer-text left-nudge">Answer</p>
+               </div>
+
+            </form>
+        </div>
+        <div class="section-styling">
+            <h4>a calculator for multiplying</h4>
+           <form>
+               <input id="first-number-mult" class="input-styling left-nudge" type="number" placeholder="#">
+               <input id="second-number-mult" class="input-styling left-nudge" type="number" placeholder="#">
+               <button id="mult-button" class="button-styling left-nudge" type="submit">MULT</button>
+               <button id="reset-button-mult" class="button-styling left-nudge" type="reset">RESET</button>
+                <div class="answer-box">
+                   <div id="answer-number-mult" class="input-styling answer-styling left-nudge"></div>
+                   <p class="answer-text left-nudge">Answer</p>
+               </div>
+
+            </form>
+        </div>     
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>

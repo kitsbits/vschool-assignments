@@ -1,0 +1,39 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+#heading {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#main-pic-container {
+    width: 80%;
+    margin: auto;
+}
+
+#main-pic {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+#page-content {
+    width: 80%;
+    margin: auto;
+}
+
+.quotes {
+    font-size: 35px;
+}
+
+#reasons {
+    text-decoration: underline;
+}
+.grey-background {
+    padding: 2%;
+    background: #fafafa;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+}

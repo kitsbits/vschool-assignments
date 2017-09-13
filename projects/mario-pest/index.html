@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mario Pest Control</title>
+    
+    <!-- styles & fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Knewave|Comfortaa:300" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+   <div class="background-images">
+       <img class="top-image" src="images/flying.png" />
+       <img class="bottom-image" src="images/walking.png"/>
+   
+       <h1 class="title">Mario Pest Control</h1>
+       
+       <article class="pest-container">
+          <h3 class="pest-text">Goombas</h3>
+          <div class="caught-box border-styles">
+              <input id="goomba-caught" type="number" class="caught-text caught-number restyle-defaults" placeholder="#">
+              <p class="caught-text">CAUGHT</p>
+          </div>
+          <div class="info-table border-styles">
+            <div class="info-table-cells">
+                <img class="pest-img" src="images/goomba.png" alt="picture of a Goomba">
+            </div>
+            <div class="info-table-cells">
+                <img class="times-img" src="images/x.png" alt="">
+            </div>
+            <div class="info-table-cells">
+                <h2 id="goomba-price" class="coin-price">5</h2>
+            </div>
+            <div class="info-table-cells">
+                <img class="coin-img" src="images/coin.png" alt="picture of a Mario coin">
+            </div>
+            <div class="info-table-cells">
+                <div class="test">
+                    <h1 id="goomba-total" class="total-pest-price"></h1>
+                    <button id="goomba-total-button" class="info-total restyle-defaults">Total</button>
+                </div>
+            </div>
+          </div>
+       </article>
+       
+       <article class="pest-container">
+          <h3 class="pest-text">Bob-ombs</h3>
+          <div class="caught-box border-styles">
+              <input id="bomb-caught" type="number" class="caught-text caught-number restyle-defaults" placeholder="#">
+              <p class="caught-text">CAUGHT</p>
+          </div>
+          <div class="info-table border-styles">
+            <div class="info-table-cells">
+                <img class="pest-img" src="images/bomb.png" alt="picture of a bomb">
+            </div>
+            <div class="info-table-cells">
+                <img class="times-img" src="images/x.png" alt="">
+            </div>
+            <div class="info-table-cells">
+                <h2 id="bomb-price" class="coin-price">7</h2>
+            </div>
+            <div class="info-table-cells">
+                <img class="coin-img" src="images/coin.png" alt="picture of a Mario coin">
+            </div>
+            <div class="info-table-cells">
+                <div class="test">
+                    <h1 id="bomb-total" class="total-pest-price"></h1>
+                    <button id="bomb-total-button" class="info-total restyle-defaults">Total</button>
+                </div>
+            </div>
+          </div>
+       </article>
+       
+       <article class="pest-container">
+          <h3 class="pest-text cheep-fix">Cheep-cheeps</h3>
+          <div class="caught-box border-styles">
+              <input id="cheep-caught" type="number" class="caught-text caught-number restyle-defaults" placeholder="#">
+              <p class="caught-text">CAUGHT</p>
+          </div>
+          <div class="info-table border-styles">
+            <div class="info-table-cells">
+                <img class="pest-img" src="images/cheep.png" alt="picture of a cheep">
+            </div>
+            <div class="info-table-cells">
+                <img class="times-img" src="images/x.png" alt="">
+            </div>
+            <div class="info-table-cells">
+                <h2 id="cheep-price" class="coin-price">11</h2>
+            </div>
+            <div class="info-table-cells">
+                <img class="coin-img" src="images/coin.png" alt="picture of a Mario coin">
+            </div>
+            <div class="info-table-cells">
+                <div class="test">
+                    <h1 id="cheep-total" class="total-pest-price"></h1>
+                    <button id="cheep-total-button" class="info-total restyle-defaults">Total</button>
+                </div>
+            </div>
+          </div>
+       </article>
+       
+       <article>
+           <div class="sum-total-box border-styles">
+                <h1 id="sum-total" class="total-price"></h1>
+                <button id="total-button" class="sum-total restyle-defaults">Total</button>
+            </div>
+       </article>
+       
+       <footer>
+           <p>www.mariopestcontrol.com</p>
+           <p>mario@mariopestcontrol.com</p>
+           <p>123 Main Street, Salt Lake City, UT, USA</p>
+       </footer>
+   </div>
+    
+    <script src="mario.js"></script>
+</body>
+</html>

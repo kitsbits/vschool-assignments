@@ -1,0 +1,11 @@
+
+.square {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    border: 1px solid grey;
+    padding: 150px;
+}

@@ -1,0 +1,63 @@
+
+.answer-box {
+    margin-top: 30px;    
+}
+
+.answer {
+    text-align: center;
+}
+
+
+
+#input-styling first-number {
+    width: 50px;
+}
+
+.input-styling {
+    width: 75px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.button-styling {
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+}
+
+.answer-styling {
+    border: 1px solid #cccccc;
+    padding-top: 20px;
+    color: darkblue;
+}
+
+.container {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.left-nudge {
+    margin-left: 2%;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-styling {
+    padding: 20px;
+    border-top: 1px solid #cccccc;
+}

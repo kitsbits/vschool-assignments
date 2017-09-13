@@ -50,7 +50,7 @@ var schoolBag = {
             return false;
         }
     },
-    isFull: {
+    isFull: function () {
         if (this.isHeavy === true) {
             return true;
         } else {
@@ -58,4 +58,37 @@ var schoolBag = {
         }
     }
 };
+
+var glasses = {
+    onFace: false,
+    hasLenses: true,
+    canSee: function() {
+        if (this.onFace === true && this.hasLenses === true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+};
+
+var beats = {
+    color: "red",
+    wordsOnArray: ["beats", "solo", "(PRODUCT)RED"],
+    writeWords: function() {
+        return this.wordsOnArray.join(" ");
+    }
+};
+
+var iPhone = {
+    model: "7",
+    color: "black",
+    caseOn: true,
+    caseColor: "yellow",
+    caseColorOption: ["stone", "blush", "yellow", "navy", "black", "red"],
+    getCaseColorIndex: function() {
+        return this.caseColorOption.indexOf("yellow");
+    }
+};
+
+
 
