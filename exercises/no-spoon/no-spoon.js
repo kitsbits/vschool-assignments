@@ -1,3 +1,4 @@
+// ONE
 var waterBottle = {
     color: "green",
     liquidIn: {
@@ -15,6 +16,7 @@ var waterBottle = {
     }
 };
 
+// TWO
 var onNightStand = {
     pens: 2,
     lipBalm: true,
@@ -31,6 +33,7 @@ var onNightStand = {
     }
 };
 
+// THREE
 var candyStars = {
     colors: ["pink", "dark pink", "orange", "purple"],
     areYummy: true,
@@ -39,6 +42,7 @@ var candyStars = {
     }
 };
 
+// FOUR
 var schoolBag = {
     laptop: false,
     lunch: false,
@@ -59,6 +63,7 @@ var schoolBag = {
     }
 };
 
+// FIVE
 var glasses = {
     onFace: false,
     hasLenses: true,
@@ -71,6 +76,7 @@ var glasses = {
     }
 };
 
+// SIX
 var beats = {
     color: "red",
     wordsOnArray: ["beats", "solo", "(PRODUCT)RED"],
@@ -79,6 +85,7 @@ var beats = {
     }
 };
 
+// SEVEN
 var iPhone = {
     model: "7",
     color: "black",
@@ -90,5 +97,68 @@ var iPhone = {
     }
 };
 
+// EIGHT
+var peopleInRoom = {
+    men: 0,
+    women: 0,
+    names: {
+        women: [
+            "Lainey",
+            "Osha",
+            "Kit"
+        ],
+        men: [
+            "John",
+            "Dallon",
+            "Adam",
+            "Nonni",
+            "Dylan",
+            "Dylan",
+            "Mak",
+            "Calvin",
+            "Aman"
+        ]
+    },
+    countPeople: function() {
+        var menCount = 0;
+        var womenCount = 0;
+        this.names.men.forEach(function() {
+            menCount ++;
+        });
+        this.men = menCount;
+        this.names.women.forEach(function() {
+            womenCount ++;
+        });
+        this.women = womenCount;
+        
+        console.log(this.men);
+        console.log(this.women);
+    }
+};
 
+// NINE
+var inputsFull = {
+    inputs: 4,
+    rightTop: true,
+    rightBottom: true,
+    leftTop: false,
+    leftBottom: false,
+    isFull: function() {
+        if (this.rightTop === true && this.rightBottom === true && this.leftTop === true && this.leftBottom === true) {
+            return true;
+        }
+    }
+    
+    
+};
 
+// TEN
+var isBobHere = {
+    name: "Bob",
+    location: true,
+    isHere: function() {
+        if (this.name[0] !== -1 && this.location !== false) {
+            return true;
+        }
+    }
+}
