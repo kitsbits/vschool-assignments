@@ -1,0 +1,21 @@
+.article-img-container {
+    height: 175px;
+    overflow: hidden;
+}
+
+.article-header-img {
+    width: 100%;
+    transform: translateY(-200px)
+}
+
+.navbar {
+    border-radius: 0px;
+    margin: 0px;
+    
+}
+
+
+
+.col-xs-4 {
+    padding: 15px;
+}
