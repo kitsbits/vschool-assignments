@@ -13,7 +13,7 @@ h1, h2, h3 {
     font-family: 'Knewave', cursive;
 }
 
-p, h4, h5, h6 {
+p, h4, h5, h6, .form-control {
     font-family: 'Comfortaa', cursive;
 }
 
@@ -57,168 +57,71 @@ p, h3 {
     z-index: -1;
 }
 
-.bottom-line {
-    position: relative;
-}
-
-.pest-container {
-    width: 50%;
-    margin: auto auto 100px auto;
-    min-width: 300px;
-}
-
-.caught-box {
-    display: inline-block;
-    float: right;
-    padding: 10px 35px 0 35px;;
-    position: relative;
-    top: -10px;
-}
-
-.caught-text {
-    text-align: center;
-    line-height: 3px;
-}
-
-.info-table {
-    position: relative; 
-    width: 100%;
-    display: table;
-    height: 80px;
-}
-
-.caught-number {
-    color: #FFEF00;
-    font-size: 2em;
-    width: 70px;
-    height: 55px;
-    text-align: center;
-}
-
 .border-styles {
     border: 1px solid #FFEF00;
     border-radius: 2px;
 }
 
-.info-table-cells {
-    display: table-cell;
-    width: 20%;
-    position: relative;
-}
-
-.pest-img {
-    width: 65px;
-    position: relative;
-    top: 35px;
-    left: 25px
-}
-
-.time-img {
-    position: relative;
-    transform: translateY(-30%);
-    display: block;
-}
-
-.times-img {
-    position: relative;
-    width: 25px;
-    left: 27px;
-    top: -5px;
-}
-
-.coin-price {
-    position: relative;
-    top: -20px;
-    color: #005BEF;
-    margin: 0;
-    font-size: 1.5em;
+.pest-title {
     text-align: center;
-    border: 1px solid #979797;
-    border-radius: 2px;
-    background-color: white;
-}
-
-.coin-img {
-    width: 60px;
-    position: absolute;
-    top: 9%;
-    left: -30%;
-}
-
-.total-pest-price {
-    font-size: 2em;
-    margin-bottom: 0;
-    width: 90%;
-    text-align: center;
-    display: block;
-}
-
-.info-total {
-    color: #005BEF; 
-    margin-bottom: -22px;
-    display: block;
-    font-size: 1em;
-    width: 90%;
-}
-
-.test {
     position: relative;
-    top: -25px;
+    transform: translateY(465%);
+}
+
+.pest-input {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    background-color: rgba(0,0,0,0.0);
+}
+
+
+
+.pest-top {
+    position: relative;
+    top: -15px;    
+}
+
+.caught-text {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+.caught-box {
+    padding-top: 25px;
+}
+
+
+
+.info-box {
+    height: 10vh;
+}
+
+.goomba-text {
     text-align: center;
 }
 
-.pest-text {
-    letter-spacing: 4px;
-    font-size: 1.5em;
-    display: inline-block;
+.info-images {
     position: relative;
-    bottom: -37px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.restyle-defaults {
-    background-color: rgba(117, 190, 218, 0.0);
-    border: 1px dashed #FFEF00;
+.sum-box {
+    position: relative;
+    top: 200px;
 }
 
-.bomb-img-fix {
-   width: 70px;
-}
-
-.cheep-fix {
-    left: 0;
-    font-size: 1em;
-    bottom: -53px;
-}
-
-footer {
-    height: 150px;
-    width: 100%;
+.footer {
     position: absolute;
     bottom: 0;
-    text-align: center;
-    background-color: #8A8780;
-    padding-top: 20px;
 }
 
-.sum-total-box {
-    height: 150px;
-    width: 50%;
-    margin: auto;
-}
-
-.total-price {
-    font-size: 3em;
-    width: 50%;
-    height: 80px;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-
-.sum-total {
-    color: #005BEF; 
-    display: block;
-    font-size: 2em;
-    width: 50%;
-    margin: auto;
+.col-xs-12 {
+    padding: 0;
 }

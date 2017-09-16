@@ -1,0 +1,29 @@
+
+.light-pink {
+    background-color: #F5C6D6;
+}
+
+.dark-pink {
+    background-color: #EE2E84;
+}
+
+.blue {
+    background-color: #85CFD8;
+}
+
+.green {
+    background-color: #8DC63F;
+}
+
+.orange {
+    background-color: #E76E34;
+}
+
+.all-boxes {
+    height: 125px;
+    border: 5px solid white;
+}
+
+.container {
+    margin-top: 100px;
+}

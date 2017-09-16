@@ -18,98 +18,29 @@
    
        <h1 class="title">Mario Pest Control</h1>
        
-       <article class="">
-          <h3 class="">Goombas</h3>
-          <div class="border-styles">
-              <input id="goomba-caught" type="number" class="" placeholder="#">
-              <p class="">CAUGHT</p>
-          </div>
-          <div class="border-styles">
-            <div class="">
-                <img class="" src="images/goomba.png" alt="picture of a Goomba">
+       <article class="col-xs-8 col-xs-offset-2 pest-container">
+          <div class="pest-top">
+            <h3 class="pest-title col-xs-6">Goombas</h3>
+            <div class="col-xs-6 col-sm-4 col-sm-offset-2 caught-box border-styles">
+              <input id="goomba-caught" type="number" class="form-control pest-input border-styles" placeholder="#">
+              <p class="caught-text">CAUGHT</p>
             </div>
-            <div class="">
-                <img class="" src="images/x.png" alt="">
-            </div>
-            <div class="">
-                <h2 id="goomba-price" class="">5</h2>
-            </div>
-            <div class="">
-                <img class="" src="images/coin.png" alt="picture of a Mario coin">
-            </div>
-            <div class="">
-                <div class="">
-                    <h1 id="goomba-total" class=""></h1>
-                    <button id="goomba-total-button" class="">Total</button>
-                </div>
-            </div>
-          </div>
+        </div>
+        <div class="border-styles info-box col-xs-12">
+            <img class="col-xs-4 col-sm-2 info-images" src="images/goomba.png" alt="picture of a Goomba">
+            <img class="col-xs-2 col-sm-1 info-images" src="images/x.png" alt="">
+            <h2 id="goomba-price" class="col-xs-2 col-sm-2 goomba-text">5</h2>
+            <img class="col-xs-4 col-sm-2 info-images" src="images/coin.png" alt="picture of a Mario coin">
+            <h1 id="goomba-total" class="col-xs-12 col-sm-3 goomba-text">12</h1>
+            <button id="goomba-total-button" class="btn col-xs-12 col-sm-2 border-styles info-images">Total</button>
+        </div>
        </article>
+       <div class="col-xs-8 col-xs-offset-2 border-styles sum-box">
+            <h1 id="sum-total" class=""></h1>
+            <button id="total-button" class="">Total</button>
+        </div>
        
-       <article class="">
-          <h3 class="">Bob-ombs</h3>
-          <div class="border-styles">
-              <input id="bomb-caught" type="number" class="" placeholder="#">
-              <p class="">CAUGHT</p>
-          </div>
-          <div class="border-styles">
-            <div class="">
-                <img class="" src="images/bomb.png" alt="picture of a bomb">
-            </div>
-            <div class="">
-                <img class="" src="images/x.png" alt="">
-            </div>
-            <div class="">
-                <h2 id="bomb-price" class="">7</h2>
-            </div>
-            <div class="">
-                <img class="" src="images/coin.png" alt="picture of a Mario coin">
-            </div>
-            <div class="">
-                <div class="">
-                    <h1 id="bomb-total" class=""></h1>
-                    <button id="bomb-total-button" class="info-total restyle-defaults">Total</button>
-                </div>
-            </div>
-          </div>
-       </article>
-       
-       <article class="">
-          <h3 class="">Cheep-cheeps</h3>
-          <div class="border-styles">
-              <input id="cheep-caught" type="number" class="" placeholder="#">
-              <p class="">CAUGHT</p>
-          </div>
-          <div class=" border-styles">
-            <div class="">
-                <img class="" src="images/cheep.png" alt="picture of a cheep">
-            </div>
-            <div class="">
-                <img class="" src="images/x.png" alt="">
-            </div>
-            <div class="">
-                <h2 id="cheep-price" class="">11</h2>
-            </div>
-            <div class="">
-                <img class="" src="images/coin.png" alt="picture of a Mario coin">
-            </div>
-            <div class="">
-                <div class="">
-                    <h1 id="cheep-total" class=""></h1>
-                    <button id="cheep-total-button" class="">Total</button>
-                </div>
-            </div>
-          </div>
-       </article>
-       
-       <article>
-           <div class="border-styles">
-                <h1 id="sum-total" class=""></h1>
-                <button id="total-button" class="">Total</button>
-            </div>
-       </article>
-       
-       <footer>
+       <footer class="footer">
            <p>www.mariopestcontrol.com</p>
            <p>mario@mariopestcontrol.com</p>
            <p>123 Main Street, Salt Lake City, UT, USA</p>
