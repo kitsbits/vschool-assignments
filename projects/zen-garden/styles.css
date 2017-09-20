@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'verdemoderna';
+  src:  url('assets/verdemoderna.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #124448;
+}
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+.header-background {
+    position: relative;
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(assets/contours.png), url(assets/noise.png), url(assets/gridlines.png), url(assets/huntington.jpg);
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    border-top: 12px solid #124448;
+    height: 310px;
+    padding: 5% 0 0 10%;
+    /* LOGO SVG:   background-image: url(http://www.csszengarden.com/214/enso.svg);*/
+}
+
+.header-background:before {
+    content: "";
+    display: block;
+    border-top: 4px solid rgba(00,30,00,0.2);
+}
+
+
+.logo {
+    width: 125px;
+}
+
+.title {
+    color: white;
+    font-size: 3.2em;
+}
+
+.subtitle {
+    font-style: italic;
+    color: rgba(250,250,250,0.5);
+}
+
+.enlightenment-requirements {
+    background-color: #FFFFFF;
+}
+
+.example-sites {
+    background-color: #E5EDE8;
+}
+
+.participation-background {
+    background-color: #C6DFD1;
+    background-image: url(assets/contours-opaque.png), url(assets/gridlines-opaque.png), url(assets/bamboo.png);
+    background-attachment: scroll, scroll, fixed;
+    background-repeat: repeat, repeat, cover;
+}
+
+.more-actions {
+    background-color: rgba(50,90,50,0.1);
+}
+
+.height {
+    height: 50vh;
+}
+
+.closer {
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(assets/contours.png), url(assets/noise.png), url(assets/gridlines.png), url(assets/koi.jpg);
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    background-position: 0 0, 0 0, 0 0, 0 50%;
+    height: 322px;
+}
+
+.footer {
+    background-color: #134347;
+    height: 161px;
+    font-family: 'verdemoderna';
+    position: relative;
+    text-align: center;
+}
+
+.footer a {
+    color: #89A1A3;
+    font-size: 5em;;
+}
+
+.footer-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-icons, .footer-icons:hover {
+    margin: 0 4%;
+    text-decoration: none;
+}
+
+.html5:after {
+    content: "5";
+}
+
+.html5:hover:after {
+    text-decoration: none;
+    content: "%";
+}
+
+.css3:after {
+    content: "3";
+}
+
+.css3:hover:after {
+    text-decoration: none;
+    content: "#";
+}
+
+.cc:after {
+    content: "c";
+}
+
+.cc:hover:after {
+    text-decoration: none;
+    content: "C";
+}
+
+.mezzo:after {
+    content: "a";
+}
+
+.mezzo:hover:after {
+    text-decoration: none;
+    content: "A";
+}
+
+.git:after {
+    content: "g";
+}
+
+.git:hover:after {
+    text-decoration: none;
+    content: "G";
+}
+
+.underlined {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .example-sites {
+        position: absolute;
+        bottom: -30%;
+    }
+    
+    .more-actions {
+        position: absolute;
+        bottom: -55%;
+        background-color: #B2CEBE;
+        background-image: url(assets/contours-opaque.png), url(assets/gridlines-opaque.png), url(assets/bamboo.png);
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat, repeat, cover;
+    }
+    
+    .footer {
+        height: 121px;
+    }
+    
+    .footer a {
+        font-size: 3.25em;
+    }
+    
+    .title {
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    .subtitle {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    .logo {
+        width: 80px
+    }
+    
+    
+
+    
+}
+
