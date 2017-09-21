@@ -7,17 +7,18 @@
     box-sizing: border-box;
 }
 
-body {
+body, h2 {
     font-family: 'Libre Baskerville', sans-serif;
     color: #124448;
 }
 
-h1 {
+h1, .left, h3 {
     font-family: 'Julius Sans One', sans-serif;
 }
 
 .container-fluid {
     position: relative;
+    border-top: 12px solid #124448;
 }
 
 .header-background {
@@ -27,21 +28,19 @@ h1 {
     background-repeat: repeat, repeat, repeat, no-repeat;
     background-size: auto, auto, auto, cover;
     background-position: 0 0, 0 0, -5px -25px, 0 50%;
-    border-top: 12px solid #124448;
+    border-top: 4px solid rgba(00,30,00,0.2);
     height: 310px;
-    padding: 5% 0 0 10%;
+    padding-top: 77px;
     /* LOGO SVG:   background-image: url(http://www.csszengarden.com/214/enso.svg);*/
 }
 
 .header-background:before {
     content: "";
     display: block;
-    border-top: 4px solid rgba(00,30,00,0.2);
 }
 
-
 .logo {
-    width: 125px;
+    width: 165px;
 }
 
 .title {
@@ -49,13 +48,50 @@ h1 {
     font-size: 3.2em;
 }
 
-.subtitle {
+.subtitle, .closer {
+    font-family: 'Libre Baskerville', sans-serif;
     font-style: italic;
     color: rgba(250,250,250,0.5);
 }
 
+.left {
+    height: 70px;
+    background-color: rgba(250,250,250,0.1);
+    text-align: center;
+    color: rgba(250,250,250,0.5);
+    font-size: 1.35em;
+    padding: 25px;
+}
+
+.right {
+    background-color: rgba(250,250,250,0.1);
+    font-family: 'verdemoderna';
+    font-size: 3.7em;
+    padding: 0;
+    border-left: 2px solid #124448;
+    color: rgba(250,250,250,0.5);
+    text-align: center;
+}
+
+.all-left {
+    padding: 4% 4% 4% 10%;
+    line-height: 2;  
+}
+
 .enlightenment-requirements {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF;  
+}
+
+.all-left h3 {
+    font-size: 2em;
+}
+
+.all-left p {
+    font-size: 1.15em;
+}
+
+.all-left a {
+    color: #0D8BA1;
 }
 
 .example-sites {
@@ -77,13 +113,28 @@ h1 {
     height: 50vh;
 }
 
-.closer {
+.closer-container {
     background-attachment: fixed, fixed, fixed, scroll;
     background-image: url(assets/contours.png), url(assets/noise.png), url(assets/gridlines.png), url(assets/koi.jpg);
     background-repeat: repeat, repeat, repeat, no-repeat;
     background-size: auto, auto, auto, cover;
     background-position: 0 0, 0 0, 0 0, 0 50%;
     height: 322px;
+    text-align: center;
+    padding: 80px;
+}
+
+.closer {
+    line-height: 2;
+}
+
+.closer-white {
+    font-style: normal;
+    color: rgba(250,250,250,0.7); 
+}
+
+.closer-white:hover {
+    color: rgba(250,250,250,0.7); 
 }
 
 .footer {
@@ -107,7 +158,7 @@ h1 {
 }
 
 .footer-icons, .footer-icons:hover {
-    margin: 0 4%;
+    margin: 0 3%;
     text-decoration: none;
 }
 
@@ -187,21 +238,48 @@ h1 {
     }
     
     .title {
-        font-size: 3em;
+        font-size: 2.5em;
         text-align: center;
     }
     
     .subtitle {
-        font-size: 1.5em;
+        font-size: 1.3em;
         text-align: center;
     }
     
     .logo {
-        width: 80px
+        width: 105px;
     }
     
+    .right {
+        border: 0;
+    }
     
+    .test {
+        position: static;
+    }
+    
+    .view-all-container {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        margin-bottom: 0;
+    }
+    
+}
 
+@media screen and (max-width: 768px) {
+    
+    .logo {
+        width: 85px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .header-background {
+        padding-top: 7%;
+    }
     
 }
 
