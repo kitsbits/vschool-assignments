@@ -18,7 +18,24 @@ h1, .left, h3 {
 
 .container-fluid {
     position: relative;
-    border-top: 12px solid #124448;
+    
+}
+
+.right-absolute {
+    background-color: #E5EDE8;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+}
+
+.more-actions-overlay {
+    position: absolute;
+    background-color: aliceblue;
+    height: 100%;
+    right: 0;
+    background-color: rgba(50,90,50,0.1);
+    
 }
 
 .header-background {
@@ -28,9 +45,10 @@ h1, .left, h3 {
     background-repeat: repeat, repeat, repeat, no-repeat;
     background-size: auto, auto, auto, cover;
     background-position: 0 0, 0 0, -5px -25px, 0 50%;
-    border-top: 4px solid rgba(00,30,00,0.2);
+    border-top: 12px solid #124448;
     height: 310px;
     padding-top: 77px;
+    z-index: 1;
     /* LOGO SVG:   background-image: url(http://www.csszengarden.com/214/enso.svg);*/
 }
 
@@ -79,7 +97,35 @@ h1, .left, h3 {
 }
 
 .enlightenment-requirements {
-    background-color: #FFFFFF;  
+    background-color: #FFFFFF;
+}
+
+.sidebar-positioning {
+    position: relative;
+    z-index: 2;
+    padding-top: 3%;
+}
+
+.sidebar-container {
+    padding-bottom: 12px;
+}
+
+.sidebar-main {
+    font-size: 0.85em;
+    color: #65747B;
+}
+
+.sidebar-author {
+    color: #626958;
+}
+
+.sidebar-main:hover, .sidebar-author:hover {
+    color: #269A91;
+    text-decoration: none;
+}
+
+.sidebar-by {
+    color: #CCD6CF;
 }
 
 .all-left h3 {
@@ -94,23 +140,13 @@ h1, .left, h3 {
     color: #0D8BA1;
 }
 
-.example-sites {
-    background-color: #E5EDE8;
-}
-
 .participation-background {
     background-color: #C6DFD1;
     background-image: url(assets/contours-opaque.png), url(assets/gridlines-opaque.png), url(assets/bamboo.png);
     background-attachment: scroll, scroll, fixed;
     background-repeat: repeat, repeat, cover;
-}
-
-.more-actions {
-    background-color: rgba(50,90,50,0.1);
-}
-
-.height {
-    height: 50vh;
+    position: relative;
+    z-index: 2;
 }
 
 .closer-container {
@@ -122,6 +158,8 @@ h1, .left, h3 {
     height: 322px;
     text-align: center;
     padding: 80px;
+    position: relative;
+    z-index: 2;
 }
 
 .closer {
@@ -143,6 +181,7 @@ h1, .left, h3 {
     font-family: 'verdemoderna';
     position: relative;
     text-align: center;
+    z-index: 2;
 }
 
 .footer a {
@@ -161,6 +200,7 @@ h1, .left, h3 {
     margin: 0 3%;
     text-decoration: none;
 }
+
 
 .html5:after {
     content: "5";
@@ -213,11 +253,14 @@ h1, .left, h3 {
 }
 
 
-
 @media screen and (max-width: 992px) {
-    .example-sites {
+    .sidebar-positioning {
         position: absolute;
         bottom: -30%;
+    }
+    
+    .participation-background {
+        position: static;
     }
     
     .more-actions {
@@ -281,5 +324,42 @@ h1, .left, h3 {
         padding-top: 7%;
     }
     
+    .closer {
+        font-size: 1.6em;
+    }
+    
+    .closer-container {
+        padding: 10px 0;
+        height: 220px
+    }
+    
+    .sidebar-main {
+        font-size: 0.65em;
+    }
+    
+    .sidebar-author {
+        font-size: 0.75em;
+    }
+    
 }
 
+
+
+
+.stupid-margin-fix {
+    margin: 0;
+    padding: 0;
+}
+
+.darker-underline {
+    border-top: 1px solid #A0B9AD;
+    border-bottom: 1px solid #A0B9AD;
+}
+
+.lighter-underline {
+    border-bottom: 1px solid #D9E3DC;
+}
+
+.margin-top-fix {
+    padding-top: 8%;
+}
