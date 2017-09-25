@@ -1,0 +1,27 @@
+
+.img {
+    width: 250px;
+}
+
+.menu {
+    border: 2px dashed dimgrey;
+    width: 80%;
+    padding: 45px;
+    margin: 55px auto 55px auto;
+    padding-left: 10%;
+}
+
+.menu-item {
+    display: inline-block;
+    margin: 2%;
+    
+}
+
+.item {
+    display: inline;
+}
+
+.title {
+    text-align: center;
+}
+

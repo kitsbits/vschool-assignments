@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'mario';
+    src: url(SuperMario256.ttf);
+}
+
+body {
+    font-family: 'mario';
+}
+
+h1 {
+    color: #EB1F22;
+    font-size: 350%;
+    ;
+}
+
+.header,
+.footer {
+    background-color: #FFDA09;
+}
+
+.luigi {
+    padding: 5%;
+    background-color: #EB1F22;
+}
+
+.about {
+    text-align: center;
+    color: #EB1F22;
+}
+
+h2 {
+    font-size: 250%;
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    font-size: 150%;
+}
+
+.footer {
+    padding: 1%;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 90%;
+    }
+    h2 {
+        font-size: 125%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    p {
+        font-size: 70%;
+    }
+    h1 {
+        font-size: 200%;
+    }
+}
+
+.mushroom {
+    max-height: 55px;
+}
