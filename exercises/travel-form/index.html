@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400,700i" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header-img"></div>
+    <h1 class="header">Where do you want to go?</h1>
+    <form id="travelForm" class="travel-form" name="travelForm">
+        <div class="spacing">
+            <input name="firstName" class="names" placeholder="First Name" type="text" maxlength="45" required>
+            <input name="lastName" class="names" placeholder="Last Name" type="text" maxlength="50" required>
+        </div>
+        <div class="spacing">
+            <label>Female</label><input name="gender" class="gender" type="radio" value="Female" checked="checked">
+            <label>Male</label><input name="gender" class="gender" type="radio" value="Male">
+        </div>
+        <div class="destination spacing">
+            <select name="selectDestination" class="dropdown-styling" required>
+                <option value="" disabled selected>Select Destination</option>
+                <option value="Saint Louis">Saint Louis</option>
+                <option value="Oklahoma City">Oklahoma City</option>
+                <option value="Grand Rapids">Grand Rapids</option>
+                <option value="Tallahasee">Tallahasee</option>
+            </select>
+        </div>
+        <div class="food-container spacing">
+            <h3>Please let us know if you have any dietary restrictions:</h3>
+            <label class="food">Vegan<input name="restrictions" class="checkboxes" value="Vegan" type="checkbox"></label>
+            <label class="food">Vegetarian<input name="restrictions" class="checkboxes" value="Vegetarian" type="checkbox"></label>
+            <label class="food">Kosher<input name="restrictions" class="checkboxes" value="Kosher" type="checkbox"></label>
+            <label class="food">Halal<input name="restrictions" class="checkboxes" value="Halal" type="checkbox"></label>
+        </div>
+        <div class="spacing submit-container">
+            <button id="submitForm" type="button" class="submit-button">SUBMIT</button>
+        </div>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>

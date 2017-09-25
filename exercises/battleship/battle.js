@@ -27,6 +27,8 @@ function random(min, max) {
 
 ////////////////////////// CREATE THE GRID \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 var theGrid = [];
+// Also generates grid that the user will see
+var userDisplayGrid = [];
 
 // Also generate user input limit array while looping
 var inputLimits = [];
@@ -35,6 +37,7 @@ var inputLimits = [];
 for (var row = 0; row < 10; row++) {
     //create new row --> x10
     var newRow = [];
+    var newDisplayRow = [];
     var newInputRow = [];
     //generate x10 objects to fill each row
     for (var column = 0; column < 10; column++) {
@@ -49,6 +52,9 @@ for (var row = 0; row < 10; row++) {
         var ship = randomizeShip();
         var newLocation = new Location(ship);
         newRow.push(newLocation);
+        
+        // Also create the grid to display to user
+        newDisplayRow.push(newLocation.display);
 
         // Also push strings to each inputLimit row
         var nextInputColumn = row.toString() + "," + column.toString();
@@ -57,10 +63,21 @@ for (var row = 0; row < 10; row++) {
 
     theGrid.push(newRow);
     inputLimits.push(newInputRow);
+    userDisplayGrid.push(newDisplayRow);
 }
 
 
 // console.log(theGrid[0][1].hit());
+
+////////// CREATES GRID TO DISPLAY TO USER \\\\\\\**can call again**\\\\\\\\
+
+function displayGrid() {
+    var theUsersGrid = [];
+    
+    for (var i = 0; i < grid.length; i++) {
+        
+    }
+}
 
 ////////////////////////// GAME ITSELF \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -82,15 +99,17 @@ var getCoordinates = function () {
     var x = parseInt(inputArray[0]);
     var y = parseInt(inputArray[1]);
     // if (theGrid[input1][input2].hit()) {console.log("Hit!")} else {console.log("Miss!");}
-
+    var currentDisplay = theGrid[x][y].display;
     var hitReturn = theGrid[x][y].hit();
     if (hitReturn === "tried") {
         console.log("You've already tried there, Captain!");
     } else if (hitReturn) {
         console.log("Hit!");
+        currentDisplay = "X";
         shipCount++;
         console.log(shipCount);
     } else if (!hitReturn) {
+        currentDisplay = "M";
         console.log("Miss!");
     }
 }
