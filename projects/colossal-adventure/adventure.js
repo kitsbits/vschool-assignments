@@ -16,10 +16,10 @@ var health = youHave[0].health;
 var yourFightPoints = youHave[0].fightPoints;
 // Add/take away to fight points depending on what's in your youHave
 
-var monsteyChoices = ["Fight them!", "Run the F away!", "Ask them a question."];
-var fightOrFlight = [monsteyChoices[0], monsteyChoices[1]];
+var monsterChoices = ["Fight them!", "Run the F away!", "Ask them a question."];
+var fightOrFlight = [monsterChoices[0], monsterChoices[1]];
 
-function NewMonsteys(name, surName, description, canAsk, health, fightPoints) {
+function NewMonsters(name, surName, description, canAsk, health, fightPoints) {
     this.name = name;
     this.surName = surName;
     this.description = description;
@@ -38,7 +38,7 @@ function takeYourShit() {
 var monsters = [{
     name: "Thomas",
     surName: "The Idiot",
-    description: "is 10 feet tall",
+    description: "10 feet tall",
     canAsk: true,
     health: 8000,
     fightPoints: 6000
@@ -75,14 +75,18 @@ function walk() {
     var randomNumber = random(1, 3);
     var whichMonster = random(0, monsters.length - 1);
     var thisMonster = monsters[whichMonster];
+
+    function fight() {
+        console.log(thisMonster.fightPoints);
+    }
+
     if (randomNumber === 1) {
         // fight
         if (thisMonster.canAsk) {
             // ask a question, fight, run away
-            var whatToDo = readline.keyInSelect(monsteyChoices, "You've run into " + thisMonster.name + " " + thisMonster.surName + ".\n" + thisMonster.name + " is " + thisMonster.description + ".\nWhat would you like to do?");
+            var whatToDo = readline.keyInSelect(monsterChoices, "You've run into " + thisMonster.name + " " + thisMonster.surName + ".\n" + thisMonster.name + " is " + thisMonster.description + ".\nWhat would you like to do?");
             if (whatToDo === 0) {
-                // fight();
-                return working();
+                return fight();
             } else if (whatToDo === 1) {
                 run();
             } else {
@@ -98,12 +102,19 @@ function walk() {
                 // fight();
                 return working();
             } else if (whatToDo === 1) {
-                run();
+                return run();
             }
         }
     }
 }
 
+
+test = 1;
+while (test < 11) {
+    walk();
+    console.log(test);
+    test++;
+}
 //The enemy is random (can be chosen out of a minimum of 3 different enemy names)
 //The user can decide to attack or run
 //If attacking, you will choose a random attack power between a min and max

@@ -11,47 +11,217 @@ function working() {
     console.log("working");
 }
 
-function runWorking() {
-    console.log("run function working");
+var monsterChoices = ["Fight them!", "Run the F away!", "Ask for advice."];
+var fightOrFlight = [monsterChoices[0], monsterChoices[1]];
+
+var youHave = [{
+    health: 3500,
+    fightPoints: 800,
+    wagon: ["You don't have this yet"],
+    bag: ["You don't have this yet"]
+}, "a key"];
+
+function printWhatYouHave() {
+    // write functin to print out current inventory
 }
 
-var monsteyChoices = ["Fight them!", "Run the F away!", "Ask them a question."];
-var fightOrFlight = [monsteyChoices[0], monsteyChoices[1]];
+var wagonArray = [];
+var bagArray = [];
 
 var monsters = [{
     name: "Thomas",
     surName: "The Idiot",
-    description: "is 10 feet tall",
+    description: "10 feet tall",
     canAsk: false,
     health: 8000,
-    fightPoints: 6000
+    fightPoints: 5000,
+    deathMessage: "Idiots are very dangerous."
 }, {
     name: "Barnabas",
     surName: "The Low Profile Trickster",
     description: "wearing a fedora",
     canAsk: true,
     health: 100,
-    fightPoints: 550
+    fightPoints: 550,
+    deathMessage: "Oops."
 }, {
     name: "Alexa",
     surName: "BoDexa",
     description: "holding a long, lit cigarette between the pointer and middle fingers of her left hand",
     canAsk: true,
     health: 5000,
-    fightPoints: 7500
+    fightPoints: 9500,
+    deathMessage: "Never fight Alexa, she's always got a blade and she's always faster than you are."
 }];
+
+var goodHitMessages = ["You landed a good hit!", "Wow, you're pretty scrappy...", "Nice. You can hold your own.", "Sheesh! You wailed on them.", "Well, aren't we tough AF.", "*clapping emoji* When it comes to life or death, you are a fisticuffs."];
+
+var gotHitMessages = ["Whelp.", "Yikes.", "Oops. You're getting beaten senseless. Get your head back in the game!", "Nice work! Just kidding. You just got hit in the face. Hard.", "It is not your day, I guess."];
+
+var lesserGoods = ["a candle", "a short dagger", "a rock", "some toothpaste", "a not unsubstantial stick", "a bag"];
+var betterGoods = ["a sword", "an axe", "a club", "another key", "a map", "diamonds", "a wagon"];
+
+// If adding places --> MUST be between "in my bag" and "on my person"
+var inMyWagon = "In my wagon";
+var inMyBag = "In my bag";
+var onMyPerson = "On my person";
+var placesToPut = [inMyWagon, inMyBag, onMyPerson];
 
 function run() {
     var randomNumber = random(1, 2);
     if (randomNumber === 1) {
         console.log("Phew - you got away!");
     } else {
-        console.log("Oops. They caught you...");
+        console.log("Oops. They caught you... You lost 100 health points.");
+        youHave[0].health -= 100;
+        if (youHave[0].health < 0) {
+            console.log("You are dead.");
+            test = 12;
+            // write youAreDead function
+        } else if (youHave.length > 3) {
+            var takeRandom = random(2, youHave.length - 1);
+            console.log("They also took: " + youHave[takeRandom] + " :/");
+            youHave.splice[takeRandom, 1];
+        }
     }
 }
 
-function fight() {
-    console.log(thisMonster.fightPoints);
+function getShit(itemToAdd) {
+
+    var noWagon = youHave[0].wagon[0] !== "You don't have this yet";
+    var noBag = youHave[0].bag[0] !== "You don't have this yet";
+    var roomLeftOnPerson = youHave.length < 7;
+    
+    var putWhere = readline.keyInSelect(placesToPut, "Where would you like to put it?");
+    
+
+
+    // function that's all the "if's"
+        // thisChoice --> You don't have... then recall make them do again
+        if (putWhere.)
+        // thisChoice --> Full... then make them decide if they'd like to keep/remove an item or discard the item
+    
+    // where do you want to put
+    switch (putWhere === inMyWagon) {}
+    switch (putWhere === inMyBag) {}
+    switch (putWhere === onMyPerson) {}
+
+    //    switch (noWagon || noBag) {
+    //        case noWagon && noBag:
+    //            whichPlacesAvailable.splice(0, 2);
+    //            break;
+    //
+    //        case noWagon && !noBag:
+    //            whichPlacesAvailable.splice(0, 1);
+    //            break;
+    //
+    //        case !noWagon && noBag:
+    //            whichPlacesAvailable.splice(1, 1);
+    //            break;
+    //    }
+    //
+    //    if (!roomLeftOnPerson) {
+    //        var onPersonIndex = whichPlacesAvailable.length - 1;
+    //        whichPlacesAvailable.splice(onPersonIndex, 1);
+    //    }
+    //
+    //    if (whichPlacesAvailable.length < 1) {
+    //        var doKeep = readline.keyInSelect(["Choose an item to remove", "Don't keep new item", "Review inventory"], "Sorry, all of your places to carry things are full :/\nIf you'd like to keep this item you'll have to choose one of your items to discard.\nYou can also take a look at your current inventory before deciding.");
+    //        
+    //        var remove = doKeep === 0;
+    //        var dontKeep = doKeep === 1;
+    //        var inventory = doKeep === 2;
+    //        if (remove) {
+    //            var pickLocation = readline.keyInSelect(whichPlacesAvailable, "From where would you like to remove an item?");
+    //
+    //            if (whichPlacesAvailable[putWhere] === inMyWagon) {
+    //                var chooseWhatToRemove = readline.keyInSelect(youHave[0].wagon, "What would you like to remove?");
+    //                youHave[0].wagon.splice(chooseWhatToRemove, 1, itemToAdd);
+    //                console.log(youHave);
+    //                // call show inventory function
+    //            } else if (whichPlacesAvailable[putWhere] === inMyBag) {
+    //                var chooseWhatToRemove = readline.keyInSelect(youHave[0].bag, "What would you like to remove?");
+    //                youHave[0].bag.splice(chooseWhatToRemove, 1, itemToAdd);
+    //                console.log(youHave);
+    //                // call show inventory function
+    //            } else if (whichPlacesAvailable[putWhere] === onMyPerson) {
+    //                var personChoices = youHave.slice(2);
+    //                var chooseWhatToRemove = readline.keyInSelect(personChoices, "What would you like to remove?");
+    //                youHave.splice(chooseWhatToRemove, 1, itemToAdd);
+    //                console.log(youHave);
+    //                // call show inventory function
+    //            }
+    //        } else if (dontKeep) {
+    //            console.log("Ok, then.");
+    //            // call function that asks if/what direction they want to walk
+    //
+    //        } else if (inventory) {
+    //            console.log(youHave);
+    //            // write functin to print out current inventory
+    //            // if look at inventory --> call doKeep() again
+    //            doKeep();
+    //        }
+    //
+    //    }
+    //    
+    //    whichPlacesAvailable.push("I don't want this.");
+    //    
+    //    var putWhere = readline.keyInSelect(whichPlacesAvailable, "Where would you like to put it?");
+    //
+    //    if (whichPlacesAvailable[putWhere] === inMyWagon) {
+    //        youHave[0].wagon.push(itemToAdd);
+    //        console.log(youHave);
+    //        // call show inventory function
+    //    } else if (whichPlacesAvailable[putWhere] === inMyBag) {
+    //        youHave[0].bag.push(itemToAdd);
+    //        console.log(youHave);
+    //        // call show inventory function
+    //    } else if (whichPlacesAvailable[putWhere] === onMyPerson) {
+    //        youHave.push(itemToAdd);
+    //        console.log(youHave);
+    //        // call show inventory function
+    //    } else if (whichPlacesAvailable[putWhere] === "I don't want this.") {
+    //        console.log("\nOkie doke.");
+    //    }
+}
+
+function fight(thisMonster, whichMonster) {
+    var fighting = 1;
+    while (fighting < 5) {
+        var hitPoints = random(1, thisMonster.fightPoints / 2);
+        var userNumber = random(1, youHave[0].fightPoints);
+        var monsterNumber = random(1, thisMonster.fightPoints);
+        var randomGoodHit = random(0, goodHitMessages.length - 1);
+        var randomGotHit = random(0, gotHitMessages.length - 1);
+        var randomBetterGood = random(0, betterGoods.length - 1);
+        var randomLesserGood = random(0, lesserGoods.length - 1);
+
+        if (youHave[0].health <= 0) {
+            console.log("You are dead.");
+            test = 12;
+            break;
+        } else if (thisMonster.fightPoints <= 0) {
+            console.log("\nYou won this fight AND vanquished this monster!\nYou won't be seeing them anymore.\nYou've also walked away with: " + betterGoods[randomBetterGood] + "!");
+            var newItem = betterGoods[randomBetterGood];
+            //getShit(newItem);
+            // add better items array
+            break;
+        } else if (fighting === 4) {
+            console.log("\nSomehow, you made it three rounds with " + thisMonster.name + "- well done!\nYou've walked away with: " + lesserGoods[randomLesserGood] + "!");
+            // add lesser items array
+            var newItem = lesserGoods[randomLesserGood];
+            //getShit(newItem);
+            break;
+        } else if (userNumber > monsterNumber) {
+            thisMonster.fightPoints -= hitPoints;
+            console.log("\nRound" + fighting + ":\n" + goodHitMessages[randomGoodHit] + "\n" + thisMonster.name + " just lost " + hitPoints + " fight points.\nThey only have " + thisMonster.fightPoints + " left.");
+            fighting++;
+        } else if (monsterNumber > userNumber) {
+            youHave[0].health -= hitPoints;
+            console.log("\nRound" + fighting + ":\n" + gotHitMessages[randomGotHit] + "\nYou just lost " + hitPoints + " health points.\nYour health is now " + youHave[0].health + ".\n");
+            fighting++;
+        }
+    }
 }
 
 function walk() {
@@ -59,27 +229,27 @@ function walk() {
     var randomNumber = random(1, 3);
     var whichMonster = random(0, monsters.length - 1);
     var thisMonster = monsters[whichMonster];
+
     if (randomNumber === 1) {
         // fight
         if (thisMonster.canAsk) {
             // ask a question, fight, run away
-            var whatToDo = readline.keyInSelect(monsteyChoices, "You've run into " + thisMonster.name + " " + thisMonster.surName + ".\n" + thisMonster.name + " is " + thisMonster.description + ".\nWhat would you like to do?");
+            var whatToDo = readline.keyInSelect(monsterChoices, "You've run into " + thisMonster.name + " " + thisMonster.surName + ".\n" + thisMonster.name + " is " + thisMonster.description + ".\nWhat would you like to do?");
+
             if (whatToDo === 0) {
-                return fight();
+                fight(thisMonster, whichMonster);
             } else if (whatToDo === 1) {
                 return run();
             } else {
                 // askAQuestion();
-                return runWorking();
+                return working();
             }
         } else {
-            console.log(thisMonster.canAsk);
             //fight or run away
             var whatToDo = readline.keyInSelect(fightOrFlight, "You've run into " + thisMonster.name + " " + thisMonster.surName + ".\n" + thisMonster.name + " is " + thisMonster.description + ".\nWhat would you like to do?");
             console.log(whatToDo);
             if (whatToDo === 0) {
-                // fight();
-                return working();
+                return fight(thisMonster, whichMonster);
             } else if (whatToDo === 1) {
                 return run();
             }
@@ -91,6 +261,5 @@ function walk() {
 test = 1;
 while (test < 11) {
     walk();
-    console.log(test);
     test++;
 }

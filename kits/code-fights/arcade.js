@@ -46,17 +46,37 @@ Ratiorg got statues of different sizes as a present from CodeMaster for his birt
 */
 
 function makeArrayConsecutive2(statues) {
+    // OUTLIERS 
+    // what if two of the same number?
+
+    // sort array
     statues.sort();
-    var statuesNeeded = 0;
-    for (var i = 0; i < statues.length; i++) {
-        if ((statues[i + 1] - statues[i]) > 1) {
-            var toSplice = statues[i] + 1;
-            console.log(toSplice);
-            statues.splice(statues[i], 0, toSplice);
-            statuesNeeded = i;
-        } 
+
+    // count statues added
+    var statuesAdded = 0;
+
+    // iterate through array to determine if next - current > 1
+    for (var i = 0; i < statues.length - 1; i++) {
+        var current = statues[i];
+        console.log(current);
+        console.log(i + 1);
+        var next = statues[i + 1];
+        console.log(statues[i]);
+        var nextIndex = i + 1;
+        var currentPlusOne = current + 1;
+
+        if (next === current) {
+            statues.splice(i, 1);
+            i--;
+        } else if (next - current > 1) {
+            statues.splice(nextIndex, 0, currentPlusOne);
+            statuesAdded++;
+        }
     }
-    return statuesNeeded;
+    // return number of statues added to array
+    return statuesAdded;
 }
 
-console.log(makeArrayConsecutive2([0,3]));
+//console.log(makeArrayConsecutive2([0, 3]));
+//console.log(makeArrayConsecutive2([0, 0, 3]));
+console.log(makeArrayConsecutive2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
