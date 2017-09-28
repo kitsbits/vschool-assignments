@@ -1,0 +1,14 @@
+
+.container {
+    width: 50%; 
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.each-photo {
+    width: 100%;
+    margin: 5%;
+}

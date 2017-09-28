@@ -1,0 +1,87 @@
+{
+    "appetizers": [
+        {
+            "name": "Soft Pretzel",
+            "ingredients": ["pretzel", "salt", "cheese sauce"],
+            "description": "A hot, salted, soft pretzel with your choice of sauces for dipping."
+        },
+        {
+            "name": "Southwest Eggrolls",
+            "ingredients": ["beans", "corn", "spicy sauce"],
+            "description": "A spicy variation on an old favorite."
+        },
+        {
+            "name": "Nachos",
+            "ingredients": ["homemade corn chips", "cheese", "chicken", "onions", "peppers", "salsa", "sour cream"],
+            "description": "A heapig plate of classic chicken nachos to share."
+        }
+    ],
+    "coldSandwiches": [
+        {
+            "name": "The Italian",
+            "ingredients": ["salami", "mortadella", "provalone", "onions", "shredded lettuce", "italian dressing", "hoagie bun"],
+            "description": "Put this in your mouth."
+        },
+        {
+            "name": "Egg Salad Sando",
+            "ingredients": ["egg salad", "lettuce", "tomato"],
+            "description": "A favorite for many."
+        },
+        {
+            "name": "Tuna Salad",
+            "ingredients": ["tuna salad", "lettuce", "tomato", "soft wheat bread"],
+            "description": "Eat it."
+        }
+    ],
+    "hotSandwiches": [
+        {
+            "name": "Tuna Melt",
+            "ingredients": ["tuna salad", "cheddar", "grilled rye"],
+            "description": "The perfect hot sando."
+        },
+        {
+            "name": "Cheeseburger",
+            "ingredients": ["ground beef", "lettuce", "tomato", "pickles", "cheese", "mayo", "mustard"],
+            "description": "A classic cheeseburger (with your choice of cheese!)"
+        },
+        {
+            "name": "Turkey Burger",
+            "ingredients": ["ground turkey", "lettuce", "tomato", "pickles", "chipotle mayo"],
+            "description": "A leaner - but equally delicious - burger option."
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Cheesecake",
+            "ingredients": ["plain cheesecake", "strawberries"],
+            "description": "A classic plain cheesecake with rotating seasonal fruits."
+        },
+        {
+            "name": "Gelato",
+            "ingredients": ["chocolate", "vanilla", "lemon"],
+            "description": "Sample all of our flavors!"
+        },
+        {
+            "name": "Chocolate Pudding",
+            "ingredients": ["chocolate pudding"],
+            "description": "Who doesn't love chocolate pudding."
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Paloma",
+            "ingredients": ["tequila", "grapefruit juice", "soda water", "lemon wedge"],
+            "description": "Yum!"
+        },
+        {
+            "name": "Clasic Gin and Tonic",
+            "ingredients": ["gin", "tonic", "lime wedge"],
+            "description": "A classic for a reason."
+        },
+        {
+            "name": "Cosmo",
+            "ingredients": ["vodka citron", "lime juice", "cranberry juice", "cointreau", "lime twist"],
+            "description": "You don't have to be a lady to be cosmopolitan."
+        }
+    ]
+}

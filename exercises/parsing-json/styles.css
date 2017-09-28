@@ -1,0 +1,31 @@
+/*
+font-family: 'Asap Condensed', sans-serif;
+font-family: 'Open Sans', sans-serif;*/
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.names-container {
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    background-color: #f7f7f9;
+    border-radius: 2px;
+    box-shadow: 2px 2px 4px #e7e7e9;
+    padding: 25px 0;
+}
+
+h1 {
+    text-align: center;
+    color: #a1a1a1;
+    margin-top: 5%;
+}
+
+.names {
+    color: darkorange;
+    text-align: left;
+    width: 40%;
+    margin: auto;
+    margin-top: 35px;
+}
