@@ -19,7 +19,7 @@ var youHave = [{
     fightPoints: 800,
     wagon: ["You don't have this yet"],
     bag: ["You don't have this yet"]
-}, "a key", "stuff", "stuff", "stuff", "stuff", "stuff"];
+}, "a key", "a thing", "another thing", "something else"];
 
 function checkYourself() {
     var health = "Health: " + youHave[0].health;
@@ -59,7 +59,16 @@ var monsters = [{
     health: 5000,
     fightPoints: 9500,
     deathMessage: "Never fight Alexa, she's always got a blade and she's always faster than you are."
-}];
+}, {
+    name: "Tooli",
+    surName: "The Softspoken",
+    description: "looking around nervously and fidgeting with a string on its sleeve.",
+    canAsk: true,
+    health: 300,
+    fightPoints: 100,
+    deathMessage: "Well, you killed Tooli, who is a wealth of information. Was it worth it?"
+    }
+];
 
 var goodHitMessages = ["You landed a good hit!", "Wow, you're pretty scrappy...", "Nice. You can hold your own.", "Sheesh! You wailed on them.", "Well, aren't we tough AF.", "*clapping emoji* When it comes to life or death, you are a fisticuffs."];
 
@@ -82,6 +91,7 @@ function whatYouWantToDo() {
         checkYourself();
     }
 }
+
 
 function walk() {
 
@@ -124,26 +134,33 @@ function fight(thisMonster, whichMonster) {
         var randomLesserGood = random(0, lesserGoods.length - 1);
 
         if (youHave[0].health <= 0) {
+            fighting = 5;
             dead(thisMonster.deathMessage);
-            test = 12;
-            break;
         } else if (thisMonster.fightPoints <= 0) {
             console.log("\nYou won this fight AND vanquished this monster!\nYou won't be seeing them anymore.\nYou've also walked away with: " + betterGoods[randomBetterGood] + "!");
             monsters.splice(whichMonster, 1);
-            checkYourself();
             var newItem = betterGoods[randomBetterGood];
-            return getShit(newItem);
+            getShit(newItem);
+            fighting = 5;
+            checkYourself();
         } else if (fighting === 4) {
             console.log("\nSomehow, you made it three rounds with " + thisMonster.name + "- well done!\nYou've walked away with: " + lesserGoods[randomLesserGood] + "!");
-            checkYourself();
             var newItem = lesserGoods[randomLesserGood];
-            return getShit(newItem);
+            fighting++;
+            youHave.push(newItem);
+            checkYourself();
         } else if (userNumber > monsterNumber) {
             thisMonster.fightPoints -= hitPoints;
+            if (thisMonster.fightPoints < 0) {
+                thisMonster.fightPoints = 0;
+            }
             console.log("\nRound" + fighting + ":\n" + goodHitMessages[randomGoodHit] + "\n" + thisMonster.name + " just lost " + hitPoints + " fight points.\nThey only have " + thisMonster.fightPoints + " left.");
             fighting++;
         } else if (monsterNumber > userNumber) {
             youHave[0].health -= hitPoints;
+            if (youHave[0].health < 0) {
+                youHave[0].health = 0;
+            }
             console.log("\nRound" + fighting + ":\n" + gotHitMessages[randomGotHit] + "\nYou just lost " + hitPoints + " health points.\nYour health is now " + youHave[0].health + ".\n");
             fighting++;
         }
@@ -163,7 +180,7 @@ function full() {
 }
 
 function getShit(itemToAdd) {
-    
+
     // splice in items if everything is full!
 
     var noWagon = youHave[0].wagon[0] !== "You don't have this yet";
@@ -269,22 +286,23 @@ function run() {
         } else if (youHave.length > 3) {
             var takeRandom = random(2, youHave.length - 1);
             console.log("They also took: " + youHave[takeRandom] + " :/");
-            youHave.splice[takeRandom, 1];
+            youHave.splice(takeRandom, 1);
+            return checkYourself();
         } else {
             checkYourself();
         }
     }
 }
 
+var userName = readline.question("Hey. You're in the forest.\n\nThe middle of the forest. You're going to have to walk around and find some shit to get out.\n\nAlso, there's a key in your pocket. It's magic, so you can't lose it.\nBUT, you can only use it once.\n\nOh, I forgot to mention that people are going to jump out randomly and attack you maybe.\nGood luck! #dontdie\n\nOh, yeah, can I have your name for our logs?  ");
 
-test = 1;
-while (test < 12) {
+console.log("\nCool. Hi, " + userName + ". I hope you make it out alive!\n");
 
+while (youHave[0].health > 0) {
     // switch/do while(?) --> while (north/south/east/west) --> some set of advice arrays, set of thingsFound arrays + questions
 
     // ask what direction they want to walk
     // when find specific item in each north/south/east/west --> that direction becomes true/false/"found" --> splices that direction from choices
     // when north/south/east/west all true/false/"found" --> game is over "You got out with your kitten!"
     whatYouWantToDo();
-    test++;
 }
