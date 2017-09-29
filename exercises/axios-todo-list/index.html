@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Dosis:500" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="header" class="header">
+        <h1 class="title">ToDo ToDay:</h1>
+    </div>
+    <form id="add-item" class="add-item-container">
+        <h2 class="new-todo-header">Add An Item To Your List</h2>
+        <input name="newTodo" class="new-todo" type="text" placeholder="Next item todo">
+        <input class="new-todo-price" placeholder="Price">
+        <textarea name="newTodoDescription" class="new-todo-description" placeholder="Description"></textarea>
+        <button id="add-button" class="add-button" type="button">ADD</button>
+    </form>
+    <div id="todo-list" class="todos">
+        
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+
+</html>

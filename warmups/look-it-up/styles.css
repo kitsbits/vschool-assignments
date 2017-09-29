@@ -1,0 +1,36 @@
+.dictionary {
+    width: 50%;
+    margin: auto;
+    background-color: #f3f3f3;
+    padding-top: 5%;
+    height: 500px;
+}
+
+.word,
+.definition, button {
+    display: block;
+    width: 75%;
+    margin: auto;
+    padding-left: 5%;
+}
+
+.word {
+    height: 50px;
+}
+
+.definition {
+    margin-top: 5%;
+    height: 150px;
+    overflow: scroll;
+}
+
+button {
+    margin-top: 5%;
+    height: 35px;
+    border: 2px solid deepskyblue;
+    border-radius: 70px;
+    background-color: transparent;
+    color: deepskyblue;
+    font-size: 1.2em;
+    
+}

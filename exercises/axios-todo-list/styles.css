@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    margin: auto;
+    padding: 5% 0;
+    border-bottom: 1px solid orange;
+}
+
+.title {
+    width: 50%;
+    margin: auto;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: rgba(250, 250, 250, 0.1);
+    padding: 20px;
+    color: white;
+}
+
+.add-item-container {
+    width: 70%;
+    margin: auto;
+}
+
+.new-todo, .add-button, .new-todo-price {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid orange;
+    height: 55px;
+}
+
+.new-todo {
+    width: 70%;
+    font-size: 1.2em;
+    color: orange;
+    padding-left: 15px;
+    margin: 5% auto;
+}
+.add-button, .new-todo-price {
+    font-size: 1.2em;
+    color: orange;
+    margin-left: 2%;
+}
+
+.new-todo-price {
+    width: 23%;
+    margin: 5% auto auto 2%;
+    padding-left: 15px;
+}
+
+.add-button {
+    width: 25%;
+    margin: 5% auto 5% 71%;
+}
+
+.new-todo-description {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid orange;
+    height: 105px;
+    width: 96%;
+    font-size: 1.2em;
+    color: orange;
+    padding: 15px;
+}
+
+.todos {
+    width: 100%;
+    margin: auto;
+    margin-top: 1px;
+    background-color: #f9f9f9;
+    border-top: 1px solid orange;
+    color: #4E4538;
+    padding: 5% 0;
+}
+
+.each-todo-container {
+    position: relative;
+    width: 70%;   
+    font-size: 1.3em;
+    font-family: 'Dosis', sans-serif;
+    margin: auto;
+    margin-top: 45px;
+}
+
+.each-todo-title {
+    width: 70%;
+    line-height: 1.5;
+    vertical-align: top;
+    margin-left: 25px;
+}
+
+.checkbox {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid orange;
+    background-color: #f9f9f9;
+}
+
+
+
+
+/*delete: #FA1634* || add: #03848B || tan: #D8CCC5 || yellow: #CAA75E || brown: #4E4538/
+
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+*/
+
+
+
+.description-container {
+    display: inline-block;
+    position: relative;
+    width: 60%;   
+    font-size: 1em;
+    font-family: 'Dosis', sans-serif;
+    margin-left: 15%;
+}
+
+.subtitles {
+    position: relative;
+    border-bottom: 1px dotted orange;
+    width: 80%;
+    margin-top: 3%;
+}
+
+.subtitles:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.description-text {
+    width: 90%;
+    padding: 5%;
+    background-color: white;
+    border: 1px solid #f7f7f7;
+}
+
+.price-text {
+    font-size: 1.3em;
+    color: orange;
+}
+
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.price-container {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+}
+
+
+
+.new-todo-header {
+    margin: 7% 0 -2% 0;
+    color: orange;
+}

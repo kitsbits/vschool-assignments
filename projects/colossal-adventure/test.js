@@ -19,7 +19,7 @@ var youHave = [{
     fightPoints: 800,
     wagon: ["You don't have this yet"],
     bag: ["You don't have this yet"]
-}, "a key"];
+}, "a key", "stuff", "stuff", "stuff", "stuff", "stuff"];
 
 function checkYourself() {
     var health = "Health: " + youHave[0].health;
@@ -86,13 +86,11 @@ function whatYouWantToDo() {
 function walk() {
 
     var randomNumber = random(1, 3);
-    var whichMonster = random(0, monsters.length - 1);
+    var whichMonster = random(0, monsters.length);
     var thisMonster = monsters[whichMonster];
 
     if (randomNumber === 1) {
-        // fight
         if (thisMonster.canAsk) {
-            // ask a question, fight, run away
             var whatToDo = readline.keyInSelect(monsterChoices, "You've run into " + thisMonster.name + " " + thisMonster.surName + ".\n" + thisMonster.name + " is " + thisMonster.description + ".\nWhat would you like to do?");
 
             if (whatToDo === 0) {
@@ -104,7 +102,6 @@ function walk() {
                 return working();
             }
         } else {
-            //fight or run away
             var whatToDo = readline.keyInSelect(fightOrFlight, "You've run into " + thisMonster.name + " " + thisMonster.surName + ".\n" + thisMonster.name + " is " + thisMonster.description + ".\nWhat would you like to do?");
             if (whatToDo === 0) {
                 return fight(thisMonster, whichMonster);
@@ -166,6 +163,8 @@ function full() {
 }
 
 function getShit(itemToAdd) {
+    
+    // splice in items if everything is full!
 
     var noWagon = youHave[0].wagon[0] !== "You don't have this yet";
     var noBag = youHave[0].bag[0] !== "You don't have this yet";
@@ -181,66 +180,80 @@ function getShit(itemToAdd) {
         console.log(placesToPut[putWhere]);
         console.log(putWhere);
 
-        switch (placesToPut[putWhere] === inMyWagon) {
-            case youHave[0].wagon[0] === "You don't have this yet":
-                return dontHaveYet();
 
-            case wagonFull:
-                console.log(placesToPut[putWhere] === inMyWagon);
-                console.log("wagon");
-                console.log(youHave.length);
-                console.log(personFull);
-                full();
-                if (full === 0) {
-                    return;
-                } else if (full === 1) {
+        switch (placesToPut[putWhere]) {
+            case inMyWagon:
+
+                if (youHave[0].wagon[0] === "You don't have this yet") {
+                    dontHaveYet();
+                } else if (wagonFull) {
+                    console.log(placesToPut[putWhere] === inMyWagon);
+                    console.log("wagon");
+                    console.log(youHave.length);
+                    console.log(personFull);
+                    full();
+                    if (full === 0) {
+                        return;
+                    } else if (full === 1) {
+                        stillHaveToPick = false;
+                        return whatYouWantToDo();
+                    }
+                } else {
                     stillHaveToPick = false;
-                    return whatYouWantToDo();
+                    if (itemToAdd === "a wagon") {
+                        youHave[0].wagon[0] = "respect";
+                    } else {
+                        youHave[0].wagon.push(itemToAdd);
+                    }
+                    return checkYourself();
                 }
                 break;
 
-            default:
-                youHave[0].wagon.push(itemToAdd);
-                return checkYourself();
-        }
+            case inMyBag:
 
-        switch (placesToPut[putWhere] === inMyBag) {
-            case youHave[0].bag[0] === "You don't have this yet":
-                return dontHaveYet();
-
-            case bagFull:
-                console.log("bag");
-                console.log(youHave.length);
-                console.log(personFull);
-                full();
-                if (full === 0) {
-                    return;
-                } else if (full === 1) {
-                    stillHaveToPick = false;
-                    return whatYouWantToDo();
+                if (youHave[0].bag[0] === "You don't have this yet") {
+                    dontHaveYet();
+                } else if (bagFull) {
+                    console.log("bag");
+                    console.log(youHave.length);
+                    console.log(personFull);
+                    full();
+                    if (full === 0) {
+                        return;
+                    } else if (full === 1) {
+                        stillHaveToPick = false;
+                        return whatYouWantToDo();
+                    } else {
+                        stillHaveToPick = false;
+                        if (itemToAdd === "a bag") {
+                            youHave[0].bag[0] = "lint";
+                        } else {
+                            youHave[0].bag.push(itemToAdd);
+                        }
+                        return checkYourself();
+                    }
                 }
                 break;
 
-            default:
-                youHave[0].bag.push(itemToAdd);
-                return checkYourself();
+            case onMyPerson:
+                if (personFull) {
+                    full();
+                    if (full === 1) {
+                        stillHaveToPick = false;
+                        return whatYouWantToDo();
+                        console.log(youHave.length);
+                        console.log(personFull);
+                    }
+                } else {
+                    stillHaveToPick = false;
+                    checkYourself();
+                    return youHave.push(itemToAdd);
+                }
+
         }
-
-        switch (placesToPut[putWhere] === onMyPerson) {
-            case (personFull):
-                //                full();
-                //                if (full === 1)
-                //                    stillHaveToPick = false;
-                //                return whatYouWantToDo();
-                console.log(youHave.length);
-                console.log(personFull);
-
-            default:
-                return youHave.push(itemToAdd);
-        }
-
     }
 }
+
 
 function run() {
     var randomNumber = random(1, 2);
