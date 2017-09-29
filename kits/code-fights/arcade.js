@@ -28,6 +28,10 @@
 //
 //adjacentElementsProduct([5, 1, 2, 3, 1, 4]);
 
+
+
+/////////////////////////////////////////
+////////////// NEXT ////////////////////
 // n-interesting polygon
 
 //function shapeArea(n) {
@@ -41,42 +45,65 @@
 //shapeArea(4);
 
 
+/////////////////////////////////////////
+////////////// NEXT ////////////////////
 /*
 Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues to be able to accomplish that. Help him figure out the minimum number of additional statues needed.
 */
 
-function makeArrayConsecutive2(statues) {
-    // OUTLIERS 
-    // what if two of the same number?
-
-    // sort array
-    statues.sort();
-
-    // count statues added
-    var statuesAdded = 0;
-
-    // iterate through array to determine if next - current > 1
-    for (var i = 0; i < statues.length - 1; i++) {
-        var current = statues[i];
-        console.log(current);
-        console.log(i + 1);
-        var next = statues[i + 1];
-        console.log(statues[i]);
-        var nextIndex = i + 1;
-        var currentPlusOne = current + 1;
-
-        if (next === current) {
-            statues.splice(i, 1);
-            i--;
-        } else if (next - current > 1) {
-            statues.splice(nextIndex, 0, currentPlusOne);
-            statuesAdded++;
-        }
-    }
-    // return number of statues added to array
-    return statuesAdded;
-}
-
+//function makeArrayConsecutive2(statues) {
+//    statues.sort(function (a, b) {
+//        return a - b;
+//    });
+//
+//    var statuesAdded = 0;
+//
+//    for (var i = 0; i < statues.length; i++) {
+//        console.log(`i: ${i}`);
+//        
+//        if (statues[i + 1] === statues[i]) {
+//            statues.splice(i, 1);
+//            i--;
+//        } else if (statues[i + 1] - statues[i] > 1) {
+//            let currentPlusOne = statues[i] + 1;
+//            statues.splice(i + 1, 0, currentPlusOne);
+//            statuesAdded++;
+//        }
+//    }
+//    return statuesAdded;
+//}
+//
 //console.log(makeArrayConsecutive2([0, 3]));
 //console.log(makeArrayConsecutive2([0, 0, 3]));
-console.log(makeArrayConsecutive2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+//console.log(makeArrayConsecutive2([4, 2, 2, 7, 18]));
+
+
+
+/////////////////////////////////////////
+////////////// NEXT ////////////////////
+/*
+Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing no more than one element from the array.
+*/
+
+function almostIncreasingSequence(sequence) {
+    for (let i = 0; i < sequence.length; i++) {        
+        if (sequence[i] === sequence[i + 1]) {
+            break;
+        }
+        let copy = sequence.slice();
+        console.log(`copied: ${copy}`);
+        copy.splice(i, 1);
+        console.log(`sliced: ${copy}`);
+        let copySorted = copy.slice();
+        copySorted.sort((a, b) => a - b);
+
+        if (copy.join() === copySorted.join()) {
+            return console.log(true);
+        }
+    }
+    return console.log(false);
+}
+
+almostIncreasingSequence([1, 2, 3, 4, 5, 3, 5, 6]);
+
+module.exports = almostIncreasingSequence;
