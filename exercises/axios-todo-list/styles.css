@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
 }
+
 body {
     margin: 0;
 }
@@ -29,7 +30,9 @@ body {
     margin: auto;
 }
 
-.new-todo, .add-button, .new-todo-price {
+.new-todo,
+.add-button,
+.new-todo-price {
     display: inline-block;
     background-color: transparent;
     border: 1px solid orange;
@@ -43,7 +46,9 @@ body {
     padding-left: 15px;
     margin: 5% auto;
 }
-.add-button, .new-todo-price {
+
+.add-button,
+.new-todo-price {
     font-size: 1.2em;
     color: orange;
     margin-left: 2%;
@@ -83,11 +88,11 @@ body {
 
 .each-todo-container {
     position: relative;
-    width: 70%;   
+    width: 70%;
     font-size: 1.3em;
     font-family: 'Dosis', sans-serif;
     margin: auto;
-    margin-top: 45px;
+    clear: both;
 }
 
 .each-todo-title {
@@ -97,16 +102,6 @@ body {
     margin-left: 25px;
 }
 
-.checkbox {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    border: 1px solid orange;
-    background-color: #f9f9f9;
-}
-
-
-
 
 /*delete: #FA1634* || add: #03848B || tan: #D8CCC5 || yellow: #CAA75E || brown: #4E4538/
 
@@ -114,12 +109,35 @@ font-family: 'Dosis', sans-serif;
 font-family: 'Anton', sans-serif;
 */
 
+.edit-container {
+    width: 70%;
+    margin-top: 45px;
+    margin-bottom: 90px;
+}
 
+
+.delete-icon {
+    float: right;
+    margin-left: 50px;
+    color: #a2a2a2;
+}
+
+.delete-icon:hover {
+    color: #FA1634;
+}
+
+.edit-icon {
+    float: right;
+    color: #a2a2a2;
+}
+.edit-icon:hover {
+    color: #6BCB45;
+}
 
 .description-container {
     display: inline-block;
     position: relative;
-    width: 60%;   
+    width: 60%;
     font-size: 1em;
     font-family: 'Dosis', sans-serif;
     margin-left: 15%;
@@ -132,12 +150,12 @@ font-family: 'Anton', sans-serif;
     margin-top: 3%;
 }
 
-.subtitles:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
+.subtitles:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 .description-text {

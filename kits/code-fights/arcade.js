@@ -87,21 +87,26 @@ Given a sequence of integers as an array, determine whether it is possible to ob
 
 function almostIncreasingSequence(sequence) {
     for (let i = 0; i < sequence.length; i++) {        
-        if (sequence[i] === sequence[i + 1]) {
-            break;
-        }
         let copy = sequence.slice();
         console.log(`copied: ${copy}`);
         copy.splice(i, 1);
         console.log(`sliced: ${copy}`);
         let copySorted = copy.slice();
         copySorted.sort((a, b) => a - b);
-
+        
+        let ifDups = copySorted.reduce((dupCount, num, i) => {
+            return num === copySorted[i + 1] ? dupCount + num : dupCount;
+        }, 0);
+        if (ifDups > 0) return false;
+                                        
+        
         if (copy.join() === copySorted.join()) {
-            return console.log(true);
+            console.log(`copy: ${copy.join()}
+copy sorted: ${copySorted.join()}`);
+            return true;
         }
     }
-    return console.log(false);
+    return false;
 }
 
 almostIncreasingSequence([1, 2, 3, 4, 5, 3, 5, 6]);
