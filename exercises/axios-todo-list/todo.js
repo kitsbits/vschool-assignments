@@ -13,24 +13,24 @@ const getList = () => {
             let editId = "edit" + i;
 
             theList.innerHTML += `            
-                <div class="edit-container">
-                    <i id="${deleteId}" class="fa fa-times fa-2x delete-icon" onclick="deleteItem('${deleteId}')"></i>
-                    <i id="${editId}" class="fa fa-pencil-square-o fa-2x edit-icon"></i>
-                </div>            
-                <div class="each-todo-container">                
-                <i id=${checkboxId} class="fa fa-circle-o fa-lg checkbox" name="checkbox" onclick="crossOffList('${checkboxId}', '${titleId}', '${descriptionId}', '${editId}')"></i>
-                <label id=${titleId} class="each-todo-title">${todo.title}</label>
-            </div>
-            <div id=${descriptionId} class="description-container">                
-                <div class="subtitles">
+        <div class="each-todo-container">
+            <i id=${checkboxId} class="fa fa-circle-o fa-lg checkbox" name="checkbox" onclick="crossOffList('${checkboxId}', '${titleId}', '${descriptionId}', '${editId}')"></i>
+            <label id=${titleId} class="each-todo-title">${todo.title}</label>
+        </div>
+        <div id=${descriptionId} class="description-container">
+            <div class="subtitles">
                 <p class="inline">Description</p>
                 <div class="inline price-container">
                     <p class="inline">PRICE:</p>
                     <p class="inline price-text">${todo.price}</p>
                 </div>
-                </div>
-                <p class="description-text">${todo.description}</p>
-            </div>`;
+            </div>
+            <p class="description-text">${todo.description}</p>
+        </div>
+        <div class="edit-container">
+            <p id="${editId}" class="edit">EDIT</p>
+            <p id="${deleteId}" class="delete" onclick="deleteItem('${deleteId}')">DELETE</p>
+        </div>`;
 
         });
     })
@@ -88,9 +88,9 @@ addButton.addEventListener("click", () => {
 
 
 window.onload = function () {
-    getList();
+        getList();
 
-    //    document.getElementById("add-button").addEventListener("click", addNewItem);
+        document.getElementById("add-button").addEventListener("click", addNewItem);
 
     document.getElementById("header").style.background = "url('https://source.unsplash.com/daily') no-repeat center";
     document.getElementById("header").style.backgroundSize = "cover";

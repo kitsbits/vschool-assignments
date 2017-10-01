@@ -77,6 +77,7 @@ body {
 }
 
 .todos {
+    position: relative;
     width: 100%;
     margin: auto;
     margin-top: 1px;
@@ -102,6 +103,9 @@ body {
     margin-left: 25px;
 }
 
+.inline {
+    display: inline;
+}
 
 /*delete: #FA1634* || add: #03848B || tan: #D8CCC5 || yellow: #CAA75E || brown: #4E4538/
 
@@ -110,27 +114,41 @@ font-family: 'Anton', sans-serif;
 */
 
 .edit-container {
-    width: 70%;
-    margin-top: 45px;
-    margin-bottom: 90px;
+/*
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+*/
+    position: relative;
+    width: 50%;
+    margin-left: 17%;
+    margin-top: -55px;
+    z-index: 10;
 }
 
-
-.delete-icon {
-    float: right;
-    margin-left: 50px;
+.edit, .delete {
     color: #a2a2a2;
+    font-size: 1em;
+    display: inline;
+    cursor: pointer;
+    cursor: hand;
 }
 
-.delete-icon:hover {
+.delete {
+    float: right;
+}
+
+.edit {
+    float: left;
+}
+
+.delete:hover {
     color: #FA1634;
 }
 
-.edit-icon {
-    float: right;
-    color: #a2a2a2;
-}
-.edit-icon:hover {
+
+.edit:hover {
     color: #6BCB45;
 }
 
@@ -160,7 +178,7 @@ font-family: 'Anton', sans-serif;
 
 .description-text {
     width: 90%;
-    padding: 5%;
+    padding: 5% 5% 50px 5%;
     background-color: white;
     border: 1px solid #f7f7f7;
 }
@@ -170,24 +188,15 @@ font-family: 'Anton', sans-serif;
     color: orange;
 }
 
-
-.inline {
-    display: inline;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
 .price-container {
     position: absolute;
     right: 15%;
     bottom: 0;
 }
 
-
-
 .new-todo-header {
     margin: 7% 0 -2% 0;
     color: orange;
 }
+
+
