@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Dosis:500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="header" class="header">
+        <h1 class="title">ToDo ToDay:</h1>
+    </div>
+    <form id="add-item" class="add-item-container">
+        <h2 class="new-todo-header">Add An Item To Your List</h2>
+        <input id="new-title" class="new-todo border-styles-bottom" type="text" placeholder="Next item todo" required>
+        <input id="new-price" class="new-todo-price border-styles-bottom" type="number" placeholder="Price" required>
+        <textarea id="new-description" class="new-todo-description border-styles-4" placeholder="Description" required></textarea>
+        <button id="add-button" class="add-button border-styles-4" type="button">ADD</button>
+    </form>
+    <div id="todo-list" class="todos">
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="todo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f9f9f9;
+    padding-bottom: 100px;
+}
+
+.header {
+    width: 100%;
+    margin: auto;
+    padding: 5% 0;
+    border-bottom: 1px solid orange;
+}
+
+.title {
+    width: 50%;
+    margin: auto;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: rgba(250, 250, 250, 0.1);
+    padding: 20px;
+    color: white;
+}
+
+.add-item-container {
+    width: 70%;
+    margin: auto;
+}
+
+.new-todo,
+.add-button,
+.new-todo-price {
+    display: inline-block;
+    height: 55px;
+}
+
+.border-styles-bottom {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid orange;
+}
+
+.new-todo {
+    width: 70%;
+    font-size: 1.2em;
+    color: orange;
+    padding-left: 15px;
+    margin: 5% auto;
+}
+
+.add-button,
+.new-todo-price {
+    font-size: 1.2em;
+    color: orange;
+    margin-left: 2%;
+}
+
+.new-todo-price {
+    width: 23%;
+    margin: 5% auto auto 2%;
+    padding-left: 15px;
+}
+
+.add-button {
+    width: 25%;
+    margin: 5% auto 5% 71%;
+}
+
+.border-styles-4 {
+    background-color: transparent;
+    border: 1px solid orange;
+}
+
+.new-todo-description {
+    display: inline-block;
+    background-color: transparent;
+    height: 105px;
+    width: 96%;
+    font-size: 1.2em;
+    color: orange;
+    padding: 15px;
+}
+
+.todos {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-top: 1px solid orange;
+    color: #4E4538;
+}
+
+.each-todo-container {
+    position: relative;
+    width: 70%;
+    font-size: 1.3em;
+    font-family: 'Dosis', sans-serif;
+    margin: auto;
+    margin-top: 75px;
+    clear: both;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.each-todo-title {
+    width: 70%;
+    line-height: 1.5;
+    font-size: 1.25em;
+    vertical-align: middle;
+    margin-left: 25px;
+    padding-bottom: 7px;
+    background: transparent;
+    border: none;
+    color: rgb(78, 69, 56);
+}
+
+.inline {
+    display: inline;
+}
+
+/*delete: #FA1634* || add: #03848B || tan: #D8CCC5 || yellow: #CAA75E || brown: #4E4538/
+
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+*/
+
+.edit-container {
+/*
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+*/
+    position: relative;
+    width: 50%;
+    margin-left: 17%;
+    margin-top: -5px;
+    z-index: 10;
+}
+
+.edit, .delete {
+    color: #a2a2a2;
+    font-size: 0.75em;
+    display: inline;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.delete {
+    float: left;
+}
+
+.edit {
+    float: right;
+}
+
+.delete:hover {
+    color: #FA1634;
+}
+
+
+.edit:hover {
+    color: #6BCB45;
+}
+
+.description-container {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    font-size: 1em;
+    font-family: 'Dosis', sans-serif;
+    margin-left: 15%;
+}
+
+.subtitles {
+    position: relative;
+    border-bottom: 1px dotted orange;
+    width: 80%;
+    margin-top: 3%;
+}
+
+.subtitles:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.description-text {
+    width: 90%;
+    padding: 5%;
+    background-color: white;
+    border: 1px solid #f7f7f7;
+    font-size: 1em;
+}
+
+.price-text {
+    font-size: 1.3em;
+    color: orange;
+    width: 55px;
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+.price-container {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+}
+
+.new-todo-header {
+    margin: 7% 0 -2% 0;
+    color: orange;
+}
+
+
+
+.editing-styles {
+    border-bottom: 2px solid #6BCB45;
+}
