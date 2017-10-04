@@ -1,3 +1,8 @@
+/*delete: #FA1634* || add: #03848B || tan: #D8CCC5 || yellow: #CAA75E || brown: #4E4538/
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+*/
+
 * {
     box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
@@ -114,19 +119,7 @@ body {
     display: inline;
 }
 
-/*delete: #FA1634* || add: #03848B || tan: #D8CCC5 || yellow: #CAA75E || brown: #4E4538/
-
-font-family: 'Dosis', sans-serif;
-font-family: 'Anton', sans-serif;
-*/
-
 .edit-container {
-/*
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 50%;
-*/
     position: relative;
     width: 50%;
     margin-left: 17%;
@@ -210,8 +203,6 @@ font-family: 'Anton', sans-serif;
     margin: 7% 0 -2% 0;
     color: orange;
 }
-
-
 
 .editing-styles {
     border-bottom: 2px solid #6BCB45;
