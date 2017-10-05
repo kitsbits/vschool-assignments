@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+.app-container {
+    width: 80%;
+    margin: 5% auto auto auto;
+}
+
+.article-title {
+    font-size: 1.2em;
+}
+
+.article-photo {
+    height: 300px;
+    background: url("https://source.unsplash.com/daily") no-repeat;
+    background-size: cover;
+}
+
+.article-container p {
+    line-height: 1.5;
+}
+
+.footer {
+    padding: 15px;
+    margin-top: 55px;
+    border-top: 1px solid #d3d3d3;
+}
+
+.footer-list {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.footer-list li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.contact-container {
+    display: inline-block;
+}
+
+.contact {
+    display: block;
+    margin-top: 20px;
+}
