@@ -14,9 +14,7 @@ function App() {
             <Navbar/>
             <Header/>
             <Signup/>
-            <ShopHeader/>
             <Featured/>
-            <CatalogHeader/>
             <Catalog/>
             <Footer/>
         </div>
