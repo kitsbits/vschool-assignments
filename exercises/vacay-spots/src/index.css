@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+.cards-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5em;
+     color: dimgrey;
+     margin: 5% 0;
+}
+
+.each-card-container {
+    position: relative;
+    width: 100%;
+    border: 25px solid white;
+    border-radius: 200px;
+    margin-bottom: 7%;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+
+.each-card-container:hover {
+    transform: scale(1.02);
+}
+
+.text-container {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    margin: auto;
+    background-color: rgba(255,200,255,0.3);
+    border-radius: 200px;
+    transition: all 0.2s ease-in-out;
+}
+
+.text-container:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.place,
+.price,
+.time,
+.cost-rank {
+    margin: 2px;
+}
+
+.place {
+    font-size: 3em;
+}
+
+.price {
+    font-size: 1.4em;
+}
+
+.time {
+    font-size: 2em;
+}
+
+.cost-rank {
+    /*position: absolute;
+    bottom: 0px;
+    left: 100px;*/
+    font-size: 3em;
+}

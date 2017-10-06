@@ -1,0 +1,28 @@
+[
+    {
+    "place": "Idaho",
+    "price": "40",
+    "timeToGo": "Spring",
+    "img": "https://images.unsplash.com/photo-1505547735609-676a8f04dc42?dpr=1&auto=compress"
+}, {
+    "place": "Cancun",
+    "price": "900",
+    "timeToGo": "Winter",
+    "img": "https://images.unsplash.com/photo-1501089501013-47ca568ad9fa?dpr=1&auto=compress"
+}, {
+    "place": "China",
+    "price": "1200",
+    "timeToGo": "Fall",
+    "img": "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?dpr=1&auto=compress"
+}, {
+    "place": "Russia",
+    "price": "1100",
+    "timeToGo": "Summer",
+    "img": "https://images.unsplash.com/photo-1490879112094-281fea0883dc?dpr=1&auto=compress"
+}, {
+    "place": "Lebanon",
+    "price": "400",
+    "timeToGo": "Spring",
+    "img": "https://images.unsplash.com/photo-1500882644194-b83ebad474e9?dpr=1&auto=compress"
+}
+]

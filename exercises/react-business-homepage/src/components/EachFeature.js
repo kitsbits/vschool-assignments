@@ -1,11 +1,16 @@
 import React from "react";
 
-function EachFeature() {
+function EachFeature(props) {
+
+    const images = {
+        background: `url(${props.img}) no-repeat center`,
+        backgroundSize: `cover`
+    }
     return (
         <div className="each-feature">
-            <img className="featured-img" src="https://images.unsplash.com/photo-1479219136056-56bb6495a005" alt="leather duffle"/>
-            <h4 className="featured-text">The Classic Duffle</h4>
-            <p className="featured-price">$199</p>
+            <div className="featured-img" style={images} alt={props.altText}></div>
+            <h4 className="featured-text">{props.title}</h4>
+            <p className="featured-price">${props.price}</p>
         </div>
     )
 }
