@@ -1,0 +1,136 @@
+/*https://images.unsplash.com/photo-1454328911520-ccf83f1ef41d?dpr=1&auto=compress*/
+
+/*purple: #493E5B;
+lightgrey: #DFE2E1;
+lightgrey2: #D5D5D3;
+darkgreen: #2D3830;
+darkgrey: #413D41;*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar-container {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.navbar-container li,
+.navbar-container ul,
+.page-title {
+    display: inline-block;
+}
+
+.page-title {
+    float: left;
+    margin-left: 20px;
+}
+
+.nav-links {
+    float: right;
+    margin-right: 150px;
+}
+
+.header-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    z-index: 1;
+    margin-bottom: 100px;
+    color: white;
+}
+
+.header-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header-text-container h1 {
+    font-size: 5em;
+}
+
+.header-text-container p {
+    font-size: 2em;
+}
+
+.each-feature-container {
+    width: 50%;
+    margin: 4% auto;
+    padding-bottom: 4%;
+    border-bottom: 1px solid #DFE2E1;
+    color: #493E5B;
+}
+
+.feature-title,
+.feature-teaser {
+    line-height: 1;
+    margin-bottom: 3%;
+}
+
+.feature-title {
+    font-size: 2.6em;
+    transition: color 0.2s ease-in-out;
+}
+
+.feature-title:hover,
+.icon:hover {
+    cursor: hand;
+    cursor: pointer;
+    color: #8F8695;
+}
+
+.feature-teaser {
+    font-size: 1.75em;
+}
+
+.feature-details,
+.navbar-container {
+    font-family: 'Gabriela', serif;
+}
+
+.older-posts-button {
+    background-color: #493E5B;
+    border: none;
+    height: 50px;
+    width: 200px;
+    color: #DFE2E1;
+    font-size: 1.2em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-container {
+    width: 100%;
+    margin: 50px auto auto auto;
+    padding-bottom: 50px;
+    text-align: center;
+    border-top: 1px solid #DFE2E1;
+}
+
+.footer-icons-container {
+    display: flex;
+    justify-content: center;
+    margin: 75px 0 50px 0;
+}
+
+.icon {
+    margin: 10px;
+    height: 55px;
+    width: 55px;
+    color: #DFE2E1;
+    background-color: #493E5B;
+    border-radius: 100px;
+    text-align: center;
+    padding: 12px;
+}
