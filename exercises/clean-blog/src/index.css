@@ -21,12 +21,25 @@ body {
     z-index: 2;
     width: 100%;
     padding-top: 20px;
+    color: white;
 }
 
 .navbar-container li,
 .navbar-container ul,
 .page-title {
     display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-container li {
+    margin-left: 30px;
+}
+
+.navbar-container li:hover,
+.page-title:hover {
+    color: #493E5B;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .page-title {
@@ -84,7 +97,8 @@ body {
 }
 
 .feature-title:hover,
-.icon:hover {
+.icon:hover,
+.inline-details:hover {
     cursor: hand;
     cursor: pointer;
     color: #8F8695;
@@ -99,6 +113,11 @@ body {
     font-family: 'Gabriela', serif;
 }
 
+.feature-details {
+    color: #8F8695;
+}
+
+
 .older-posts-button {
     background-color: #493E5B;
     border: none;
@@ -108,6 +127,11 @@ body {
     font-size: 1.2em;
     margin-left: 50%;
     transform: translateX(-50%);
+    transition: all 0.2 ease-in-out;
+}
+
+.older-posts-button:hover {
+    background-color: #8F8695;
 }
 
 .footer-container {

@@ -1,6 +1,7 @@
 import React from "react";
 
 function FeaturedPosts(props) {
+
     return (
         <div className="each-feature-container">
             <h1 className="feature-title">{props.feature.title}</h1>

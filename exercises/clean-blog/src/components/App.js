@@ -10,15 +10,10 @@ function App() {
             <Navbar/>
             <Header/>
             <Body/>
-        <button className="older-posts-button" type="button">OLDER POSTS>></button>
+            <button className="older-posts-button" type="button">OLDER POSTS>></button>
             <Footer/>
         </div>
     )
 }
 
 export default App;
-
-// navbar (logo + 4 links)
-// header (title + tagline)
-// body (older posts) > featured posts
-// footer (social + copyright)
