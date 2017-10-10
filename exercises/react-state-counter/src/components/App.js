@@ -44,7 +44,7 @@ class App extends React.Component {
                 <button type="button" onClick={this.addClick}>+</button>
                 <button type="button" onClick={this.subtractClick}>-</button>
             <div id="box" className="box" style={{backgroundColor: `${this.state.Color}`}}>
-                    <input id="input-color" type="text" name="" placeholder="give me a color" onChange={this.changeColor}/>
+                    <input id="input-color" type="text" name="" placeholder="give me a color" onChange={this.changeColor} style={{color: `${this.state.Color}`, outlineColor: `${this.state.Color}`}}/>
                 </div>
             </div>
         )

@@ -1,7 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
 .box {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     background-color: red;
     display: inline-block;
     margin-left: 200px;
+}
+
+input {
+    width: 150px;
+    font-size: 1em;
 }
