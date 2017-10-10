@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Wonder Woman",
+        "aka": "Diana of Themyscira",
+        "firstAppearance": "All-Star Comics #8 (December, 1941)",
+        "publisher": "DC Comics",
+        "img": "https://orig00.deviantart.net/1fed/f/2017/142/7/e/wonder_woman__kneeling___transparent_background__by_camo_flauge-dba1wli.png"
+    },
+    {
+        "name": "Thor",
+        "aka": "Thor Odinson",
+        "firstAppearance": "Journey into Mystery #83 (August, 1962)",
+        "publisher": "Marvel Comics",
+        "img": "https://vignette3.wikia.nocookie.net/avengersalliance/images/2/22/Avengers_Thor_Portrait_Art.png/revision/latest?cb=20130529070928"
+    },
+    {
+        "name": "Lara Croft",
+        "aka": "Tomb Raider",
+        "firstAppearance": "1999",
+        "publisher": "Dark Horse Comics",
+        "img": "http://www.pngmart.com/files/2/Tomb-Raider-PNG-File.png"
+    },
+    {
+        "name": "Batman",
+        "aka": "Bruce Wayne",
+        "firstAppearance": "Detective Comics #27",
+        "publisher": "DC Comics",
+        "img": "https://vignette2.wikia.nocookie.net/batman/images/9/92/Batman-ArkhamKnight-BatsuitRender.png/revision/latest?cb=20140605151444"
+    }
+]

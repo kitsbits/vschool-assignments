@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+}
+
+body {
+    background-color: #DCF5FF;
+}
+
+.app-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-container {
+    width: 300px;
+    display: inline-block;
+    margin: 5%;
+    padding: 25px;
+    border: 3px solid #6ACCE8;
+}
+
+.hero-container h1,
+.hero-container h3 {
+    margin: 0;
+}
+
+.hero-container h1 {
+    padding-top: 25px;
+    border-top: 1px solid #6ACCE8;
+    margin-top: 25px;
+}
+
+.hero-img {
+    /*width: 100%;*/
+    height: 325px;
+}
