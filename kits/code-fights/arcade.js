@@ -118,7 +118,7 @@ function almostIncreasingSequence(sequence) {
     function isGreater(curr, i, arr) {
         return !i || curr > arr[i - 1];
     }
-    
+
     for (let i = 0; i < sequence.length; i++) {
         const copy = sequence.slice();
         copy.splice(i, 1);

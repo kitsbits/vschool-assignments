@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nosifer', cursive;
+}
+
+.list-container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hit-container {
+    position: relative;
+    width: 250px;
+    padding: 25px;
+    border: 15px solid white;
+}
+
+.hit-img {
+    height: 300px;
+    width: auto;
+}
+
+.hit-text {
+    padding: 10px;
+    background-color: white;
+}
