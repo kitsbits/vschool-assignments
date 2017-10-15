@@ -47,33 +47,33 @@
 
 ////
 
-const s1 = "abca";
-const s2 = "xyzbac";
+const s1 = "aabcc";
+const s2 = "adcaa";
 function commonCharacterCount(s1, s2) {
-    // const one = s1.split("").reduce((allLetters, eachLetter) => {
-    //     if (eachLetter in allLetters) {
-    //         allLetters[eachLetter]++;
-    //     } else {
-    //         allLetters[eachLetter] = 1;
-    //     }
-    //     return allLetters;
-    // }, {});
-    const split2 = s2.split("");
-    console.log(split2);
+    const one = s1.split("").reduce((allLetters, eachLetter) => {
+        if (eachLetter in allLetters) {
+            allLetters[eachLetter]++;
+        } else {
+            allLetters[eachLetter] = 1;
+        }
+    });
+    const two = s2.split("").reduce((allLetters, eachLetter) => {
+        if (eachLetter in allLetters) {
+            allLetters[eachLetter]++;
+        } else {
+            allLetters[eachLetter] = 1;
+        }
+    });
+
     let letterCount = 0;
-    for (let i = 0; i < s1.length; i++) {
-        split2.forEach((letter, index) => {
-            console.log(`letter outside: ${letter}`);
-            if (!index || letter !== letter[index-1]) {
-                if (letter === s1[i]) {
-                    letterCount++;
-                    console.log(`letter inside: ${letter}`);
-                    console.log(`s1[i]: ${s1[i]}`);
-                }
-            }
-        })
+    for (letters in one) {
+        if (letters in two) {
+            letterCount += Math.min(one[letters], two[letters]);
+        }
     }
+
     return letterCount;
+
 }
 
 console.log(commonCharacterCount(s1, s2));

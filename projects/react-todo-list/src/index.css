@@ -1,0 +1,118 @@
+/*
+<form onSubmit={event => {
+        event.preventDefault();
+        props.delete(props.todo._id)}}>
+    <h1>{props.todo.title}</h1>
+    <p>{props.todo.description}</p>
+<input onChange={props.handleChange} type="checkbox" name="completed" checked={props.value.completed} />
+    <button type="submit">DELETE</button>
+</form>
+<form onSubmit={event => {
+        event.preventDefault();
+        console.log(props);
+        props.edit(props.todo._id, props.value);
+    }}>
+    <input onChange={props.handleChange} type="text" name="title" value={props.value.title} />
+    <input onChange={props.handleChange} type="text" name="description" value={props.value.description} />
+    <button type="submit">UPDATE</button>
+</form>*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Marvel', sans-serif;
+}
+
+.list-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todos-container {
+    margin-left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-todo-container {
+    position: fixed;
+    left: 0;
+    width: 40%;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-todo-text {
+    width: 250px;
+}
+
+.todo-item-container {
+    background: url("./assets/annie-spratt-42051.jpg") no-repeat center;
+    background-size: cover;
+    opacity: 0.8;
+    width: 400px;
+    margin-top: 75px;
+    height: 400px;
+    padding: 25px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display-block {
+    display: block;
+}
+
+.todo-title {
+    width: 90%;
+    height: 70px;
+    font-size: 1.25em;
+    margin: auto auto 45px auto;
+    padding-left: 15px;
+    border: none;
+}
+
+.todo-description {
+    width: 90%;
+    height: 150px;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.delete-button {
+    width: 90%;
+    height: 45px;
+    background-color: transparent;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 728px) {
+    .list-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todos-container {
+        margin: auto;
+    }
+
+    .add-todo-container {
+        position: relative;
+        margin: auto;
+    }
+}
