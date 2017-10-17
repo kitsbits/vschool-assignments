@@ -3,9 +3,9 @@ import AboutComponent from "./Component"
 import about from "./about.json";
 
 class About extends React.Component {
-    constructor() {
-        super();
-    }
+    // constructor() {
+    //     super();
+    // }
 
     getProfiles() {
         return about.map((profile, i) => {
@@ -17,7 +17,7 @@ class About extends React.Component {
         return (
             <div className="header-container">
                 <div className="about"></div>
-                <h2 className="header-text">Here we are!</h2>
+                <h1 className="header-text">Here we are!</h1>
                 <div className="profile-container">
                     {this.getProfiles()}
                 </div>
