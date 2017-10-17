@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+}
+
+.navbar-container a {
+    margin: 20px;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home {
+    background: url("https://images.unsplash.com/photo-1495214783159-3503fd1b572d") no-repeat center;
+    height: 450px;
+    width: 100%;
+    background-size: cover;
+}
+
+.about {
+    background: url("https://images.unsplash.com/photo-1505784045224-1247b2b29cf3") no-repeat center;
+    height: 450px;
+    width: 100%;
+    background-size: cover;
+}
+
+.contact {
+    background: url("https://images.unsplash.com/photo-1493847242172-d46053a1f671") no-repeat center;
+    height: 450px;
+    width: 100%;
+    background-size: cover;
+}
+
+.services {
+    background: url("https://images.unsplash.com/photo-1507090960745-b32f65d3113a") no-repeat center;
+    height: 450px;
+    width: 100%;
+    background-size: cover;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-container {
+    width: 350px;
+    padding: 55px 25px;
+    border: 20px solid white;
+    background-color: #f5f5f5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-img {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    margin: auto auto 15% auto;
+}
+
+.contact-img:after {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    background-color: red;
+    border-radius: 100px;
+    border: 1px solid grey;
+}
+
+.contact-name,
+.contact-number {
+    margin: 0;
+}

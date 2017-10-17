@@ -37,6 +37,28 @@
     align-items: center;
 }
 
+.todo-container {
+    position: relative;
+}
+
+.edit-todo-item-container {
+    position: absolute;
+    top: 75px;
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+    overflow: scroll;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox {
+    position: absolute;
+    left: 10px;
+    top: 165px;
+}
+
 .add-todo-container {
     position: fixed;
     left: 0;
@@ -57,7 +79,7 @@
     opacity: 0.8;
     width: 400px;
     margin-top: 75px;
-    height: 400px;
+    height: 450px;
     padding: 25px;
     overflow: scroll;
     display: flex;
@@ -71,16 +93,16 @@
 
 .todo-title {
     width: 90%;
-    height: 70px;
+    /*height: 70px;*/
+    background-color: white;
     font-size: 1.25em;
-    margin: auto auto 45px auto;
-    padding-left: 15px;
+    padding: 15px;
     border: none;
 }
 
 .todo-description {
     width: 90%;
-    height: 150px;
+    height: 200px;
     padding: 15px;
     font-size: 1.1em;
     background-color: transparent;
@@ -99,6 +121,12 @@
     border: none;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+    transition: all 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
 }
 
 @media screen and (max-width: 728px) {

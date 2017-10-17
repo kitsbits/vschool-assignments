@@ -7,7 +7,7 @@ function AddTodo(props) {
             props.add();
             }}>
             <input className="add-todo-text" onChange={props.change} type="text" name="title" value={props.value.title}/>
-        <input className="add-todo-text" onChange={props.change} type="text" name="description" value={props.value.description}/>
+            <input className="add-todo-text" onChange={props.change} type="text" name="description" value={props.value.description}/>
             <button type="submit">ADD</button>
         </form>
     )

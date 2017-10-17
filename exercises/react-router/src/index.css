@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.app-container {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-container {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
