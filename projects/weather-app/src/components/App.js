@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Today from "./Today";
-import Forecast from "./Forecast";
+import ForecastContainer from "./forecast/Container";
 
 import DarkSkyApi from 'dark-sky-api';
 DarkSkyApi.apiKey = '68f41e08c2748e697411c2fae78bcf0c';
@@ -41,7 +41,7 @@ class App extends React.Component {
             <div className="app-container">
                 <Navbar/>
                 <Today data={this.state.data}/>
-                <Forecast/>
+                <ForecastContainer/>
             </div>
         )
     }
