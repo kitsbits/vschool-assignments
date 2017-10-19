@@ -12,7 +12,8 @@
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 105px;
 }
 
 .counter-container h1 {
@@ -20,8 +21,8 @@
     font-size: 5em;
 }
 
-.counter-container button {
-    height: 250px;
+.counter-container > button {
+    height: 150px;
     width: 150px;
     background-color: transparent;
     border: 2px solid orange;
@@ -32,6 +33,19 @@
     outline: none;
 }
 
-.counter-container button:hover {
+.counter-container button:hover,
+.remove-button:hover {
     background-color: rgba(300, 110, 0, 0.2);
+}
+
+.remove-button {
+    height: 35px;
+    width: 100px;
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    font-size: 1em;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
 }

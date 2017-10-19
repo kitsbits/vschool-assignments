@@ -16,14 +16,9 @@ export const reset = () => {
     }
 }
 
-export const removeFirstContact = () => {
+export const removeContact = (contact) => {
     return {
-        type: "REMOVE_FIRST_CONTACT"
-    }
-}
-
-export const removeContact = () => {
-    return {
-        type: "REMOVE_CONTACT"
+        type: "REMOVE_CONTACT",
+        contact: contact
     }
 }

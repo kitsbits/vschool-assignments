@@ -1,7 +1,6 @@
 import React from "react";
 import ListItem from "./ListItem";
 import {connect} from "react-redux";
-import {removeFirstContact} from "../../redux/actions/index";
 
 function List(props) {
     return (
@@ -11,7 +10,6 @@ function List(props) {
                             item={item}
                             key={item.phone + i}/>
                     })}
-            <button onClick={props.removeFirstContact} type="button">REMOVE FIRST CONTACT</button>
         </div>
     )
 }
@@ -20,7 +18,7 @@ function mapStateToProps(state) {
     return state;
 }
 
-export default connect(mapStateToProps, {removeFirstContact})(List);
+export default connect(mapStateToProps, {})(List);
 
 
 // make list component

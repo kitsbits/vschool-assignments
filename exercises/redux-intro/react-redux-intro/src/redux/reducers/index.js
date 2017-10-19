@@ -39,12 +39,12 @@ const reducer = (prevState = state, action) => {
                 counter: 0
             }
 
-        case "REMOVE_FIRST_CONTACT":
-            const listMinusFirst = [...prevState.list];
-            listMinusFirst.shift();
+        case "REMOVE_CONTACT":
+            const newList = [...prevState.list].filter(contact => contact.firstName !== action.contact);
+            console.log(newList);
             return {
                 ...prevState,
-                list: listMinusFirst
+                list: newList
             }
 
         default:
