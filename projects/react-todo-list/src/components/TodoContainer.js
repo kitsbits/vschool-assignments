@@ -12,6 +12,7 @@ class TodoContainer extends React.Component {
             }
         }
         this.handleChange = this.handleChange.bind(this);
+        this.editClick = this.editClick.bind(this);
     }
 
     handleChange(event) {
@@ -29,11 +30,16 @@ class TodoContainer extends React.Component {
         })
     }
 
+    editClick(event) {
+        console.dir(event.target);
+    }
+
     render() {
         return (
             <TodoItem   todo={this.props.todo}
                         delete={this.props.delete}
                         edit={this.props.edit}
+                        editClick={this.editClick}
                         handleChange={this.handleChange}
                         value={this.state.editTodo}/>
         )

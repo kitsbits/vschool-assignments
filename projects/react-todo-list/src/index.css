@@ -56,7 +56,7 @@
 .checkbox {
     position: absolute;
     left: 10px;
-    top: 165px;
+    top: 70px;
 }
 
 .add-todo-container {
@@ -74,6 +74,7 @@
 }
 
 .todo-item-container {
+    position: relative;
     background: url("./assets/annie-spratt-42051.jpg") no-repeat center;
     background-size: cover;
     opacity: 0.8;

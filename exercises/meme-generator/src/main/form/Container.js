@@ -36,6 +36,13 @@ class FormContainer extends React.Component {
         // get what's in inputs to Redux store
         // call add function to update meme list
         this.props.addMeme(this.state.inputs);
+        this.setState({
+            inputs: {
+                imgURL: "",
+                topText: "",
+                bottomText: ""
+            }
+        })
     }
 
     render() {

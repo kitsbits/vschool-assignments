@@ -56,14 +56,14 @@ function commonCharacterCount(s1, s2) {
         } else {
             allLetters[eachLetter] = 1;
         }
-    });
+    }, {});
     const two = s2.split("").reduce((allLetters, eachLetter) => {
         if (eachLetter in allLetters) {
             allLetters[eachLetter]++;
         } else {
             allLetters[eachLetter] = 1;
         }
-    });
+    }, {});
 
     let letterCount = 0;
     for (letters in one) {

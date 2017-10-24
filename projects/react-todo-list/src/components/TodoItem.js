@@ -1,12 +1,20 @@
 import React from "react";
 
 function TodoItem(props) {
+    const iconStyles = {
+        color: "white",
+        position: "absolute",
+        top: "10px",
+        right: "30px"
+    }
+
     return (
         <div className="todo-container">
             <form className="todo-item-container" onSubmit={event => {
                 event.preventDefault();
                 props.delete(props.todo._id)
             }} disabled>
+                <i onClick={props.editClick} className="fa fa-2x fa-pencil" style={iconStyles}></i>
                 <h4 className="todo-title display-block" name="title" type="text">{props.todo.title}</h4>
                 <p className="todo-description display-block" name="description">{props.todo.description}</p>
                 <input className="checkbox" onChange={props.handleChange} type="checkbox" name="completed" checked={props.value.completed}/>

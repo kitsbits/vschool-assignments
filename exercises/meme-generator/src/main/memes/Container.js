@@ -13,7 +13,8 @@ class MemeContainer extends React.Component {
         return this.props.memes.map((meme, i) => {
             return <Meme
                     meme={meme}
-                    key={meme.imgURL + i}/>
+                    key={meme.imgURL + i}
+                    index={i}/>
         })
     }
 

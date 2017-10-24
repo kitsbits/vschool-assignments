@@ -12,6 +12,12 @@ export default function reducer(prevState = state, action) {
                 memes: newMemes
             }
 
+        case "DELETE_MEME":
+            newMemes.splice(action.index, 1);
+            return {
+                memes: newMemes
+            }
+
         default:
             return prevState;
     }
