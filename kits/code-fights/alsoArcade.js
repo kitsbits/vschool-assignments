@@ -51,6 +51,7 @@ const s1 = "aabcc";
 const s2 = "adcaa";
 function commonCharacterCount(s1, s2) {
     const one = s1.split("").reduce((allLetters, eachLetter) => {
+        console.log(allLetters)
         if (eachLetter in allLetters) {
             allLetters[eachLetter]++;
         } else {
