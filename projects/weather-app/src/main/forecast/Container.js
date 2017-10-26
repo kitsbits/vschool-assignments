@@ -11,6 +11,8 @@ class ForecastContainer extends React.Component {
             forecasts: [],
             colors: ["4A90E2", "75B5FF", "A6CFFF", "C7E1FF", "DFEEFF", "F4F9FF", "FFFFFF"]
         }
+
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -29,9 +31,15 @@ class ForecastContainer extends React.Component {
                 <ForecastComponent
                     key={current.sunsetTime + i}
                     forecast={current}
-                    color={this.state.colors[i]}/>);
+                    color={this.state.colors[i]}
+                    handleClick={this.handleClick}/>);
         }
         return genArray;
+    }
+
+    handleClick(event) {
+        
+
     }
 
     render() {

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Today from "./Today";
+import Today from "./atAGlance/TodayContainer";
+import Summary from "./Summary";
 import ForecastContainer from "./forecast/Container";
 
 import DarkSkyApi from 'dark-sky-api';
@@ -16,7 +17,8 @@ class App extends React.Component {
                 dewPoint: "",
                 humidity: "",
                 uvIndex: "",
-                wind: ""
+                wind: "",
+                summary: ""
             }
         }
     }
@@ -29,7 +31,8 @@ class App extends React.Component {
                     dewPoint: response.dewPoint,
                     humidity: response.humidity,
                     uvIndex: response.uvIndex,
-                    wind: response.windSpeed
+                    wind: response.windSpeed,
+                    summary: response.summary
                 }
             });
             console.log(response);
@@ -40,6 +43,7 @@ class App extends React.Component {
         return (
             <div className="app-container">
                 <Navbar/>
+                <Summary summary={this.state.data.summary}/>
                 <Today data={this.state.data}/>
                 <ForecastContainer/>
             </div>
