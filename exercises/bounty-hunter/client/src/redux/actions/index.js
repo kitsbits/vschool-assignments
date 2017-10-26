@@ -1,34 +1,58 @@
 // ACTIONS \\
 import axios from "axios";
 
-export const getBounties = () => {
-    
+const url = "localhost:8001/bounties/";
 
-    return ({
-        type: "GET_BOUNTIES",
-        bounties
-    });
+export const getBounties = () => {
+    return (dispatch) => {
+        axios.get(url).then(response => {
+            dispatch({
+                type: "GET_BOUNTIES",
+                bounties
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+    }
 }
 
 export const addBounty = (bounty) => {
-    return ({
-        type: "ADD_BOUNTY",
-        bounty
-    });
+    return (dispatch) => {
+        axios.post(url).then(response => {
+            dispatch({
+                type: "ADD_BOUNTY",
+                bounty
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+    }
 }
 
 export const deleteBounty = (id, bounty) => {
-    return ({
-        type: "DELETE_BOUNTY",
-        id,
-        bounty
-    });
+    return (dispatch) => {
+        axios.delete(url + id).then(respone => {
+            dispatch({
+                type: "DELETE_BOUNTY",
+                id,
+                bounty
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+    }
 }
 
 export const editBounty = (id, editedBounty) => {
-    return ({
-        type: "EDIT_BOUNTY",
-        id,
-        editedBounty
-    });
+    return (dispatch) => {
+        axios.put(url + id, editBounty).then(response => {
+            dispatch({
+                type: "EDIT_BOUNTY",
+                id,
+                editedBounty
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+    }
 }
