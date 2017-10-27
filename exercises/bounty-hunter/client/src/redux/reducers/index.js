@@ -1,9 +1,10 @@
+// REDUCER \\
 const state = {
     bounties: []
 }
 
 const reducer = (prevState = state, action) => {
-    let newBounties = [...prevState];
+    let newBounties = [...prevState.bounties];
     switch(action.type) {
         case "GET_BOUNTIES":
             return {
@@ -11,7 +12,8 @@ const reducer = (prevState = state, action) => {
             }
 
         case "ADD_BOUNTY":
-            newBounties.push(action.bounty)
+            newBounties.push(action.bounty);
+            console.log(newBounties)
             return {
                 bounties: newBounties
             }

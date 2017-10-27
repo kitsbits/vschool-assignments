@@ -1,14 +1,15 @@
 // ACTIONS \\
 import axios from "axios";
 
-const url = "localhost:8001/bounties/";
+const url = "http://localhost:8002/bounties/";
 
 export const getBounties = () => {
     return (dispatch) => {
         axios.get(url).then(response => {
+            console.log(response)
             dispatch({
                 type: "GET_BOUNTIES",
-                bounties
+                bounties: response.data
             });
         }).catch(err => {
             console.log(err);

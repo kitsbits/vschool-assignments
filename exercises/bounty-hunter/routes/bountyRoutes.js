@@ -6,7 +6,7 @@ let bounties = [
     {
         firstName: "Something",
         lastName: "Sith-Sounding",
-        living: true,
+        living: "T",
         bounty: 1200,
         type: "Sith",
         _id: uuid()
@@ -14,7 +14,7 @@ let bounties = [
     {
         firstName: "Something",
         lastName: "Jedi-Sounding",
-        living: false,
+        living: "F",
         bounty: 1700,
         type: "Jedi",
         _id: uuid()
