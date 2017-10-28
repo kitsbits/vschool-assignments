@@ -21,10 +21,10 @@ class ListContainer extends React.Component{
                 width: "400px"
             }
             return (
-                <div style={styles}>
+                <div style={styles}key={bounty._id}>
                     <ListComponent
                         bounty={bounty}
-                        key={bounty._id}/>
+                        />
                 </div>
             )
         });

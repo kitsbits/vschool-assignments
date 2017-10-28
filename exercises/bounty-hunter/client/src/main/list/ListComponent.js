@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {editBounty, deleteBounty} from "../../redux/actions";
+import {Link} from "react-router-dom";
 
 function ListComponent(props) {
     const priceStyles = {
@@ -55,7 +56,7 @@ function ListComponent(props) {
             <h2>{props.bounty.firstName}</h2>
             <h3>{props.bounty.lastName}</h3>
             <div style={buttonContainerStyles}>
-                <button type="button" style={props.bounty.living === "F" ? deadButtonStyles : buttonStyles}>EDIT</button>
+            <Link to={`/bounties/${props.bounty._id}`}><button style={props.bounty.living === "F" ? deadButtonStyles : buttonStyles}>EDIT</button></Link>
             <button onClick={(e) => props.deleteBounty(props.bounty._id)} type="button" style={props.bounty.living === "F" ? deadButtonStyles : buttonStyles}>DELETE</button>
             </div>
         </div>

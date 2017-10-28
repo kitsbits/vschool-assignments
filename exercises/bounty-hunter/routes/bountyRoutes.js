@@ -4,20 +4,20 @@ const uuid = require("uuid/v4");
 
 let bounties = [
     {
-        firstName: "Something",
-        lastName: "Sith-Sounding",
+        firstName: "SOMETHING",
+        lastName: "SITH-SOUNDING",
         living: "T",
         bounty: 1200,
-        type: "Sith",
-        _id: uuid()
+        type: "SITH",
+        _id: "e6246090-24e3-44e9-bfc1-89dfee51b63c"
     },
     {
-        firstName: "Something",
-        lastName: "Jedi-Sounding",
+        firstName: "SOMETHING",
+        lastName: "JEDI-SOUNDING",
         living: "F",
         bounty: 1700,
-        type: "Jedi",
-        _id: uuid()
+        type: "JEDI",
+        _id: "0911e09a-7327-433b-9a23-fba219249e04"
     }
 ];
 
@@ -35,8 +35,9 @@ bountyRoutes.get("/", (req, res) => {
 });
 
 bountyRoutes.get("/:id", (req, res) => {
-    let toSend = bounties.find();
-    console.log(toSend);
+    const toSend = bounties.find(bounty => {
+        return bounty._id === req.params.id
+    });
     res.send(toSend);
 });
 
