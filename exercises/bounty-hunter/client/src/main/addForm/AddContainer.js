@@ -25,14 +25,13 @@ class AddContainer extends React.Component {
         this.setState(prevState => {
             return {
                 ...prevState,
-                [name]: newValue
+                [name]: newValue.toUpperCase()
             }
         })
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(this.state);
         this.props.addBounty(this.state);
         this.setState({
             firstName: "",

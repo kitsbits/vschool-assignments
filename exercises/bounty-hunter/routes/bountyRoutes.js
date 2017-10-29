@@ -42,8 +42,10 @@ bountyRoutes.get("/:id", (req, res) => {
 });
 
 bountyRoutes.post("/", (req, res) => {
+    console.log(req.body);
     bounties.push(req.body);
     req.body._id = uuid();
+    // console.log(bounties);
     res.send(req.body);
 });
 
@@ -57,7 +59,7 @@ bountyRoutes.delete("/:id", (req, res) => {
 bountyRoutes.put("/:id", (req, res) => {
     // with the id find object in DB and alter it with req.body
     bounties = bounties.map(bounty => {
-        if (taco._id === req.params.id) {
+        if (bounty._id === req.params.id) {
             return req.body = Object.assign(bounty, req.body);
         } else {
             return bounty;

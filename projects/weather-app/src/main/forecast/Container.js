@@ -38,7 +38,7 @@ class ForecastContainer extends React.Component {
     }
 
     handleClick(event) {
-        
+
 
     }
 

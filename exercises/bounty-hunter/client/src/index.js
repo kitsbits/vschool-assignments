@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import pseudo from 'react-pseudo';
 import App from "./main/App";
 import reducer from "./redux/reducers";
 import {BrowserRouter as Router} from "react-router-dom"
