@@ -19,7 +19,7 @@ export const getBounties = () => {
 
 export const addBounty = (bounty) => {
     return (dispatch) => {
-        axios.post(url).then(response => {
+        axios.post(url, bounty).then(response => {
             dispatch({
                 type: "ADD_BOUNTY",
                 bounty

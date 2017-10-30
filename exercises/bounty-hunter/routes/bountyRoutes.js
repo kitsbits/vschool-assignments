@@ -42,7 +42,6 @@ bountyRoutes.get("/:id", (req, res) => {
 });
 
 bountyRoutes.post("/", (req, res) => {
-    console.log(req.body);
     bounties.push(req.body);
     req.body._id = uuid();
     // console.log(bounties);

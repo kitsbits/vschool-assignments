@@ -45,6 +45,7 @@ class Bounty extends React.Component {
     }
 
     render() {
+        console.log(this.state);
         return (
             <BountyComponent
                 bounty={this.state}

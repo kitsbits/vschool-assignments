@@ -31,6 +31,7 @@ class ListContainer extends React.Component{
     }
 
     render() {
+        console.log(this.props);
         const containerStyles = {
             marginTop: "50px"
         }
