@@ -30,7 +30,7 @@ function Issue(props) {
                 </form>
             </div>
             <div>
-                <CommentsContainer comments={props.issue.comments}/>
+                <CommentsContainer issue={props.issue}/>
             </div>
         </div>
     )

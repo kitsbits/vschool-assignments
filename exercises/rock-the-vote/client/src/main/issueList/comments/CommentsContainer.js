@@ -1,5 +1,6 @@
 import React from "react";
 import CommentsComponent from "./CommentsComponent";
+import AddCommentContainer from "./addCommentForm/AddCommentContainer";
 
 class Comments extends React.Component {
     constructor() {
@@ -7,7 +8,7 @@ class Comments extends React.Component {
     }
 
     genComments() {
-        return this.props.comments.map(comment => {
+        return this.props.issue.comments.map(comment => {
             return (
                 <CommentsComponent
                         comment={comment}
@@ -17,8 +18,19 @@ class Comments extends React.Component {
     }
 
     render() {
+        const containerStyles = {
+            border: "1px solid black",
+            padding: "25px",
+            marginTop: "10px",
+            width: "50%"
+        }
+        console.log(this.props);
         return (
-            this.genComments()
+            <div style={containerStyles}>
+                <AddCommentContainer addId={this.props.issue._id}/>
+                {this.genComments()}
+            </div>
+
         )
     }
 }

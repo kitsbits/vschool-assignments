@@ -29,13 +29,16 @@ export default function reducer(prevState = state, action) {
                 issues: editedIssues
             };
 
+        case "ADD_COMMENT":
+            return console.log(action.response);
+
         case "DELETE_ISSUE":
             let issuesWithOneDeleted = [...prevState.issues].filter(issue => {
                 return issue._id !== action.id;
             });
             return {
                 issues: issuesWithOneDeleted
-            };            
+            };
 
         default:
             return prevState;

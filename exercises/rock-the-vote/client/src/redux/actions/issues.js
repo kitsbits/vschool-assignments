@@ -1,5 +1,5 @@
 import axios from "axios";
-let url = "http://localhost:9010/";
+const url = "http://localhost:9010/";
 
 export function loadIssues() {
     return (dispatch) => {
