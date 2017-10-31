@@ -1,6 +1,8 @@
 import React from "react";
 import moment from "moment";
 import CommentsContainer from "./comments/CommentsContainer";
+import {upVote} from "../../redux/actions";
+import {connect} from "react-redux";
 
 function Issue(props) {
     const date = moment(props.issue.datePosted).format('LL');
@@ -41,7 +43,7 @@ function Issue(props) {
         fontSize: "1.4em",
         height: "40px",
         width: "30px",
-        border: "1px solid #50E3C2",
+        border: "2px solid #50E3C2",
         borderRadius: "2px",
         margin: "0 5px",
         display: "flex",
@@ -54,7 +56,7 @@ function Issue(props) {
         fontSize: "3em",
         height: "40px",
         width: "30px",
-        border: "1px solid #50E3C2",
+        border: "2px solid #50E3C2",
         borderRadius: "2px",
         margin: "0 5px",
         display: "flex",
@@ -77,15 +79,21 @@ function Issue(props) {
         borderRadius: "none",
         backgroundColor: "transparent",
         color: "#50E3C2",
-        marginRight: "15px"
+        marginRight: "15px",
+        borderRadius: "2px"
+    }
+
+    const mainContainerStyles = {
+        paddingBottom: "5px",
+        borderBottom: "1px solid #9B9B9B"
     }
 
     return (
-        <div>
+        <div style={mainContainerStyles}>
             <div>
                 <div>
                     <div style={titleContainerStyles}>
-                        <h1 style={titleStyles}>{props.issue.title}</h1><span style={{alignSelf: "flex-end"}}>upvotes: </span><span style={countStyles}>{props.issue.upVotes}</span><span style={plusStyles}>^</span>
+                        <h1 style={titleStyles}>{props.issue.title}</h1><span style={{alignSelf: "flex-end"}}>upvotes: </span><span style={countStyles}>{props.issue.upVotes}</span><span onClick={(e) => props.upVote(props.issue)} style={plusStyles}>^</span>
                     </div>
                     <p style={descriptionStyles}>{props.issue.description}</p>
                     <div style={postDetailsContainer}>
@@ -108,4 +116,4 @@ function Issue(props) {
     )
 }
 
-export default Issue;
+export default connect(null, {upVote})(Issue);

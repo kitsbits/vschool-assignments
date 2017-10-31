@@ -38,10 +38,12 @@ class AddContainer extends React.Component {
 
     render() {
         return (
-            <AddComponent
-                handleSubmit={this.handleSubmit}
-                handleChange={this.handleChange}
-                input={this.state}/>
+            <div>
+                <AddComponent
+                    handleSubmit={this.handleSubmit}
+                    handleChange={this.handleChange}
+                    input={this.state}/>
+            </div>
         )
     }
 }

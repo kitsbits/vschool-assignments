@@ -29,6 +29,18 @@ export default function reducer(prevState = state, action) {
                 issues: editedIssues
             };
 
+        case "UP_VOTE":
+            let upVoted = [...prevState.issues].map(issue => {
+                if (issue._id === action.issue._id) {
+                    return action.issue
+                } else {
+                    return issue
+                }
+            });
+            return {
+                issues: upVoted
+            };
+
         case "ADD_COMMENT":
         let commentedIssue = [...prevState.issues].map(issue => {
             if (issue._id === action.commentedIssue._id) {

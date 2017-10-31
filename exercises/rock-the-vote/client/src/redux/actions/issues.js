@@ -53,3 +53,15 @@ export function deleteIssue(id) {
         });
     };
 }
+
+export function upVote(issue) {
+    const update = {upVotes: issue.upVotes + 1}
+    return (dispatch) => {
+        axios.put(url + issue._id, update).then(response => {
+            dispatch({
+                type: "UP_VOTE",
+                issue: response.data
+            })
+        })
+    }
+}

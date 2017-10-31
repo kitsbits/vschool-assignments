@@ -1,5 +1,5 @@
 // ACTIONS \\
-import {loadIssues, addIssue, editIssue, deleteIssue} from "./issues";
+import {loadIssues, addIssue, editIssue, deleteIssue, upVote} from "./issues";
 import {addComment} from "./comments";
 
 
@@ -8,5 +8,6 @@ export {
     addIssue,
     editIssue,
     deleteIssue,
-    addComment
+    addComment,
+    upVote
 }
