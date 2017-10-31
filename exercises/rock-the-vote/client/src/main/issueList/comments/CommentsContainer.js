@@ -19,12 +19,13 @@ class Comments extends React.Component {
 
     render() {
         const containerStyles = {
-            border: "1px solid black",
             padding: "25px",
             marginTop: "10px",
-            width: "50%"
+            backgroundColor: "white",
+            height: "300px",
+            overflow: "scroll",
+            borderRadius: "2px"
         }
-        console.log(this.props);
         return (
             <div style={containerStyles}>
                 <AddCommentContainer addId={this.props.issue._id}/>

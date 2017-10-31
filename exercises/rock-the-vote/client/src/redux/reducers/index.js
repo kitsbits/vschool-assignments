@@ -30,7 +30,16 @@ export default function reducer(prevState = state, action) {
             };
 
         case "ADD_COMMENT":
-            return console.log(action.response);
+        let commentedIssue = [...prevState.issues].map(issue => {
+            if (issue._id === action.commentedIssue._id) {
+                return action.commentedIssue;
+            } else {
+                return issue;
+            }
+        });
+        return {
+            issues: commentedIssue
+        };
 
         case "DELETE_ISSUE":
             let issuesWithOneDeleted = [...prevState.issues].filter(issue => {

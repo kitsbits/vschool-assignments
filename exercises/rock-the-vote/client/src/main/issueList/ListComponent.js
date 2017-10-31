@@ -46,14 +46,21 @@ class ListComponent extends React.Component {
     }
 
     render() {
+        const containerStyles = {
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "75px"
+        }
         return (
-            <Issue
-                issue={this.props.issue}
-                input={this.state}
-                handleChange={this.handleChange}
-                handleEdit={this.handleEdit}
-                handleDelete={this.handleDelete}
-                handleToggle={this.handleToggle}/>
+            <div style={containerStyles}>
+                <Issue
+                    issue={this.props.issue}
+                    input={this.state}
+                    handleChange={this.handleChange}
+                    handleEdit={this.handleEdit}
+                    handleDelete={this.handleDelete}
+                    handleToggle={this.handleToggle}/>
+            </div>
         )
     }
 }

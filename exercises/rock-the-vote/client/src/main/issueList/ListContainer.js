@@ -14,9 +14,19 @@ class ListContainer extends React.Component {
 
     genList() {
         return this.props.issues.map(issue => {
-            return <ListComponent
-                        issue={issue}
-                        key={issue._id}/>
+            const containerStyles = {
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                alignItems: "stretch",
+                width: "75%",
+                margin: "auto"
+            }
+            return (
+                <div style={containerStyles} key={issue._id}>
+                    <ListComponent issue={issue}/>
+                </div>
+            )
         });
     }
 

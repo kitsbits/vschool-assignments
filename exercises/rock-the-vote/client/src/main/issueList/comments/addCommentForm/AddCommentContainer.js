@@ -12,7 +12,6 @@ class AddCommentContainer extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleToggle = this.handleToggle.bind(this);
     }
 
     handleChange(event) {
@@ -30,12 +29,11 @@ class AddCommentContainer extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         this.props.addComment(this.props.addId, this.state);
-        event.target.style.display = "none";
+        this.setState({
+            text: ""
+        })
     }
 
-    handleToggle(event) {
-        event.target.nextSibling.style.display = "inherit";
-    }
 
     render() {
         return (

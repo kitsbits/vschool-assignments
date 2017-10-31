@@ -1,18 +1,13 @@
 // COMMENT ACTIONS \\
 import axios from "axios";
-const url = "http://localhost:9010/";
+const url = "http://localhost:9010/issues/";
 
 export function addComment(id, commentText) {
     return (dispatch) => {
-        const withNewComment = {
-            comments: {
-                text: commentText
-            }
-        }
-        axios.put(url + id, withNewComment).then(response => {
+        axios.post(url + id + "/comments", commentText).then(response => {
             dispatch({
                 type: "ADD_COMMENT",
-                response: response.data
+                commentedIssue: response.data
             })
         }).catch(err => {
             console.log(err);
