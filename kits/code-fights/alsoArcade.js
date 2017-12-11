@@ -49,32 +49,39 @@
 
 const s1 = "aabcc";
 const s2 = "adcaa";
+// function commonCharacterCount(s1, s2) {
+//     const one = s1.split("").reduce((allLetters, eachLetter) => {
+//         console.log(allLetters)
+//         if (eachLetter in allLetters) {
+//             allLetters[eachLetter]++;
+//         } else {
+//             allLetters[eachLetter] = 1;
+//         }
+//     }, {});
+//     const two = s2.split("").reduce((allLetters, eachLetter) => {
+//         if (eachLetter in allLetters) {
+//             allLetters[eachLetter]++;
+//         } else {
+//             allLetters[eachLetter] = 1;
+//         }
+//     }, {});
+//
+//     let letterCount = 0;
+//     for (letters in one) {
+//         if (letters in two) {
+//             letterCount += Math.min(one[letters], two[letters]);
+//         }
+//     }
+//
+//     return letterCount;
+//
+// }
+//
+// console.log(commonCharacterCount(s1, s2));
+
+const s1 = "aabcc";
+const s2 = "adcaa";
+
 function commonCharacterCount(s1, s2) {
-    const one = s1.split("").reduce((allLetters, eachLetter) => {
-        console.log(allLetters)
-        if (eachLetter in allLetters) {
-            allLetters[eachLetter]++;
-        } else {
-            allLetters[eachLetter] = 1;
-        }
-    }, {});
-    const two = s2.split("").reduce((allLetters, eachLetter) => {
-        if (eachLetter in allLetters) {
-            allLetters[eachLetter]++;
-        } else {
-            allLetters[eachLetter] = 1;
-        }
-    }, {});
-
-    let letterCount = 0;
-    for (letters in one) {
-        if (letters in two) {
-            letterCount += Math.min(one[letters], two[letters]);
-        }
-    }
-
-    return letterCount;
-
+    
 }
-
-console.log(commonCharacterCount(s1, s2));
