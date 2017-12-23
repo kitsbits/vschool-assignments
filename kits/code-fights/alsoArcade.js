@@ -158,11 +158,33 @@ function commonCharacterCount(s1, s2) {
 //
 // console.log(sortByHeight(a));
 
+// const open = [];
+// const close = [];
+// for (let i in s) {
+//     if (s[i] === "(") {
+//         open.push(i);
+//     } else if (s[i] === ")") {
+//         close.push(i);
+//     }
+// }
+// close.reverse();
+// console.log(open, close);
+
 const s = "a(bc)de";
 const t = "co(de(fight)s)";
 
 function reverseParentheses(s) {
-    
+    s = s.split("");
+    while (s.lastIndexOf("(") !== -1) {
+        const mostInnerOpen = s.lastIndexOf("(");
+        const mostInnerClosed = s.indexOf(")") + 1;
+        const toReplace = s.slice(mostInnerOpen, mostInnerClosed);
+        s.splice(mostInnerOpen, toReplace.length);
+        toReplace.pop();
+        toReplace.shift();
+        s.splice(mostInnerOpen, 0, ...toReplace.reverse())
+    }
+    return s.join("");
 }
 
-console.log(reverseParentheses(s))
+console.log(reverseParentheses(t))
