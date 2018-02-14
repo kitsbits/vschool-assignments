@@ -1,22 +1,5 @@
-var chai = require("chai");
-var assert = chai.assert;
-
-// var almostIncreasingSequence = require("../arcade.js");
-//
-// describe("Can only remove numbers to get strictly increasing sequence", function () {
-//
-//     it("should tell if you can only remove characters to get a strictly increasing sequence", function () {
-//         assert.isFalse(almostIncreasingSequence([1, 3, 2, 1]));
-//         assert.isTrue(almostIncreasingSequence([1, 3, 2]));
-//         assert.isTrue(almostIncreasingSequence([3, 5, 67, 98, 3]));
-//         assert.isFalse(almostIncreasingSequence([1, 2, 1, 2]));
-//         assert.isTrue(almostIncreasingSequence([1, 1, 2]));
-//         assert.isFalse(almostIncreasingSequence([1, 2, 3, 4, 5, 3, 5, 6]));
-//         assert.isFalse(almostIncreasingSequence([1, 2, 5, 5, 5]));
-//     });
-// });
-
-const boxBlur = require("../boxBlur");
+const chai = require("chai");
+const assert = chai.assert;
 
 const tests = {
     one: [[1,1,1],
@@ -41,6 +24,33 @@ const tests = {
          [27,81,36,63,63,72,81]]
 }
 
+function boxBlur(image) {
+    const columns = (image.length - 3) + 1;
+    const rows = (image[0].length - 3) + 1;
+
+    const returnArray = [];
+
+    for (let i = 0; i < columns; i++) {
+        const row = []
+        for (let j = 0; j < rows; j++) {
+            const row1 = image[i];
+            const row2 = image[i+1];
+            const row3 = image[i+2];
+            const sumTotal = row1[j] + row1[j+1] + row1[j+2] + row2[j] + row2[j+1] + row2[j+2] + row3[j] + row3[j+1] + row3[j+2];
+            const average = Math.floor( sumTotal / 9);
+            row.push(average);
+        }
+        returnArray.push(row);
+    }
+    return returnArray;
+}
+
+// boxBlur(tests.one);
+boxBlur(tests.three);
+// boxBlur(tests.four);
+// boxBlur(tests.five);
+
+
 const answers = {
     one: [[1]],
     two: [[28]],
@@ -63,3 +73,5 @@ describe("#blurbox", () => {
         assert.deepEqual(boxBlur(tests.five), answers.five);
     });
 })
+
+module.exports = boxBlur;
